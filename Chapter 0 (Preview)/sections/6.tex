@@ -1,0 +1,237 @@
+\chapter{Rational  Expressions}
+%%%%%%%%%%%%%%% SECTION HEADER %%%%%%%%%%%%%%%%
+\rhead{6}
+\lhead{Rational  Expressions}
+%%%%%%%%%%%%%%%%%%% START %%%$%%%%%%%%%%%%%%%%%
+Rational expression is an expression of the form P/Q   , where P and Q are polynomials and Q is not zero. Examples are 
+\begin{equation*}
+    		\frac{3x^4-56x^2}{4x-10},\quad \frac{5}{y+1}
+\end{equation*}
+\section{Simplifying}
+Multiplying and dividing rational expressions is very similar to the process we use to multiply and divide fractions.
+\begin{tcolorbox}[title=Reduce Common factor,
+fonttitle=\bfseries]
+        	\begin{equation} 
+            	\frac{a\cancel{c}}{b\cancel{c}}=\frac{a}{b} \label{reduce_lcd}
+            \end{equation}
+\end{tcolorbox}
+To simplify, you need to factor numerator and denominator
+, if possible. Then find their common factors and cancel them out.
+%=========== EXAMPLE 1
+\begin{exa}
+	Simplify each expression.
+\end{exa}
+	\begin{align*}
+		\frac{x^2-36y^2}{x^2-3xy-18y^2}=?&	
+        						&&\text{Factor numerator and denominator}\\
+        \frac{\cancel{(x-6y)}(x+6y)}{(x+3y)\cancel{(x-6y)}}&
+        						&&\text{Cancel out common factors}\\
+        \frac{x+6y}{x+3y}&		&&\text{Our solution}\\
+    \end{align*}
+    \begin{align*}
+        \frac{3xy}{3xy^2+6x^2y}=?&		&&\text{Factor denominator}\\
+        \frac{\cancel{3xy}}{\cancel{(3xy)}(y+2x)}&		&&\text{Cancel out common factor}\\
+        \frac{1}{y+2x}&	&&\text{Our Solution}
+	\end{align*}
+   \begin{align*}
+   		\frac{x^3-4x^2-5x}{3x^2-30x+75}=?&	&&\text{Factor GCF}\\
+         \frac{x(x^2-4x-5)}{3(x^2-10x+25)}=?&	&&\text{Factor out completely}\\
+         \frac{x(x+1)\cancel{(x-5)}}{3\cancel{(x-5)}(x-5)}&	&&\text{Reduce}\\
+         \frac{x(x+1)}{3(x-5)}&	&&\text{Our solution}\\
+         &&&\\
+         \frac{-3x+6y}{x^2-7xy+10y^2}=?&	&&\text{Factor GCF}\\
+         \frac{-3(x-2y)}{x^2-7xy+10y^2}=?&	&&\text{Factor out completely}\\
+         \frac{-3\cancel{(x-2y)}}{(x-5y)\cancel{(x-2y)}}=?&	&&\text{Reduce}\\
+         \frac{-3}{x-5y}& &&\text{Our solution}
+   \end{align*}
+\section{Multiplying and Dividing}
+When multiplying with rational expressions we first divide out common factors,\eqref{reduce_lcd}, then multiply straight across, \eqref{cross_across}. The process is identical for division with the extra first step of multiplying by the reciprocal, \eqref{division}.
+\begin{tcolorbox}[title=Multiplication,fonttitle=\bfseries]
+        	\begin{equation} 
+            	\frac{a}{b}\cdot \frac{c}{d}=\frac{ac}{bd} \label{cross_across}
+            \end{equation}
+                        \[(b, d\neq0)\]
+       \tcbsubtitle[before skip=\baselineskip]%
+        {Division}
+        	\begin{equation} 
+            	\frac{a}{b}\div \frac{c}{d}=\frac{a}{b}\cdot\frac{d}{c}
+                \label{division}
+            \end{equation}
+                        \[(b,c,d\neq 0) \]
+\end{tcolorbox}
+
+% ========== Example 3
+\begin{exa}
+	Find each multiplication and division.
+    \[
+    \frac{2x^2+5x+2}{4x^2-1}\cdot \frac{10x^2+5x-5}{x^2+x-2}=? \]
+    First, factor each fractions.\[
+        \frac{(2x+1)(x+2)}{(2x-1)(2x+1)}\cdot \frac{5(2x-1)(x+1)}{(x-1)(x+2)}\]
+    Remove common factors,
+    \[
+        \frac{\cancel{(2x+1)}\cancel{(x+2)}}  
+        {\cancel{(2x-1)}\cancel{(2x+1)}}       \cdot
+        \frac{5\cancel{(2x-1)}(x+1)}{(x-1)\cancel{(x+2)}}
+        \]
+    now multiply,
+    \[	\frac{5(x+1)}{x-1}\ \checkmark
+    			\]\\
+    \[
+    \frac{8x^3+27y^3}{64x^3-y^3}\div \frac{4x^2-9y^2}{16x^2+4xy+y^2}=? \]
+    First, change the division to multiplication and swap the numerator and
+    denominator of second fraction
+     \[
+    \frac{8x^3+27y^3}{64x^3-y^3}\cdot \frac{16x^2+4xy+y^2}{4x^2-9y^2} \]
+    Now, factor each fraction
+     \[
+    \frac{(2x+3y)(4x^2-6xy+9y^2)}{(4x-y)(16x^2+4xy+y^2)}\cdot \frac{16x^2+4xy+y^2}{(2x-3y)(2x+3y)} \]
+    Cancel out common factors, then multiply
+     \[
+    \frac{\cancel{(2x+3y)}(4x^2-6xy+9y^2)}{(4x-y)\cancel{(16x^2+4xy+y^2)}}\cdot \frac{\cancel{16x^2+4xy+y^2}}{(2x-3y)\cancel{(2x+3y)}} \] 
+      \[
+    \frac{4x^2-6xy+9y^2}{(4x-y)(2x-3y)}\ \checkmark \] 
+\end{exa}
+\section{Least Common Denominator (LCD)}
+As with fractions, the least common denominator or LCD is very important to
+working with rational expressions. The process we use to find and LCD is based
+on the process used to find the LCD of integers. Usually the LCD of $a$ and $b$ are denoted by $LCD(a,b)$. There are many methods to find LCD. Here we will only discuss \textbf{listing multiples} method.
+\subsection{Listing multiples}
+In this method, we list some multiples of each denominator. Then the lowest
+common multiple will be our answer.
+% ========== EXAMPLE 1
+\begin{exa}
+	What is LCD(4,6) = ?\\  
+\end{exa}
+  First, list multiples of 4 and 6:
+  \begin{align*}
+ 	 \text{Multiples of 4}&: \ 4, 8, 12, 16, 20, 24, 28, \cdots\\
+  	\text{Multiples of 6}&:\ 6, 12, 18, 24, 30, \cdots
+  \end{align*}
+Then we choose the common multiples:
+\begin{align*}
+  \text{Multiples of 4}&: 4, 8, \circled{12}, 16, 20, \circled{24}, 28, \cdots\\
+  \text{Multiples of 6}&: 6, \circled{12}, 18,\circled{24}, 30, \cdots
+ \end{align*}
+  The lowest common multiple is 12, so LCD(4,6) =12
+\vspace{0.4cm}
+% ========== NOTE
+\begin{nt}When finding the LCD of several monomials we first find the LCD of the coefficients, then use all variables and attach the highest exponent on each variable.\\
+\end{nt}
+% ======== EXAMPLE 3
+\begin{exa}
+	Find the LCD of $4x^2y^5$ and $6x^4y^3z^6$.
+\end{exa}
+We begin by finding the LCD of coefficients 4 and 6. The LCD(4,6) is 12. Then
+use all variables with highest exponents on each variable, $x^4y^5z^6$. Finally,
+multiply them to get the LCD is $12x^4y^5z^6$.\\
+%========= Note 2
+\begin{nt}
+The same pattern can be used on polynomials that have more than one term.
+However, we must first factor each polynomial so we can identify all the factors to be used (attaching highest exponent if necessary).\\
+\end{nt}
+%========= EXAMPLE 4
+\begin{exa}
+	Find the LCD of $x^2-x-12$ and $x-4$.
+\end{exa}
+Factor each polynomial.
+\begin{align*}
+		&x^2-x-12=(x+3)(x-4) &  	&(x-4) =\text{not factorable}
+\end{align*}
+Multiply all different factors with highest exponent on each factor. 
+\begin{align*}
+		&LCD = (x+3)(x-4) &&\text{Our solution}
+\end{align*}
+\begin{nt}Notice we only used $(x -4)$ once in our LCD. This is because it only appears as a factor once in either polynomial. The only time we need to repeat a factor or use an exponent on a factor is if there are exponents when one of the polynomials is factored.\\
+\end{nt}
+% =========== Example 5
+\begin{exa}
+	Find the LCD of $x^2-10x+25$ and $x^2-14x+45$
+\end{exa}
+Begin by factoring each polynomial.
+\begin{align*}
+		&x^2-10x+25 = (x-5)^2	&	&x^2-14x+45=(x-9)(x-5)
+\end{align*}
+Multiply all different factors. If they are repeated, choose the highest exponent.
+\begin{align*}
+		&LCD = (x-5)^2(x-9) &&\text{Our solution}
+\end{align*}
+\section{Adding and Subtracting}
+Adding and subtracting rational expressions is identical to adding and subtracting with integers. Recall that when adding with a common denominator we add the numerators and keep the denominator. This is the same process used with rational expressions. Remember to reduce, if possible, your final answer.\\
+Be very careful with the subtraction. Subtraction with common denominator follows the same pattern, though the subtraction can cause problems if we are not careful with it.To avoid any sign errors,  always use parenthesis and then distribute 
+negative.
+% ====== Example 6
+\begin{exa}
+	\begin{align*}
+			(a)\,\, \frac{2x+1}{x^2-27y} +\frac{6x}{x^2-27y} &=?
+	\end{align*}
+Both are having the same denominator, so just add the numerators.
+	\begin{align*}
+			\frac{2x+1}{x^2-27y} +\frac{6x}{x^2-27y} &=\frac{2x+1+6x}{x^2-27y}\\
+            &=\frac{8x+1}{x^2-27y}
+	\end{align*}
+	\begin{align*}
+		(b)\,\, \frac{4x}{2x^2+11x-6}-\frac{3x+1}{2x^2+11x-6} &=?
+	\end{align*}
+Their denominator is the same, subtract the numerators.
+	\begin{align*}
+		\frac{4x}{2x^2+11x-6}-\frac{3x+1}{2x^2+11x-6} &=\frac{4x-(3x+1)}
+        												{2x^2+11x-6} \\
+        &=\frac{x-1}{2x^2+11x-6}
+	\end{align*}
+\end{exa}
+
+When we don’t have a common denominator we will have to find the least
+common denominator (LCD) and build up each fraction so the denominators
+match. Here are the steps you can use to build up the fraction:
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+\item Find LCD.
+\item Compare the denominator with LCD and find out what factors are missing.
+\item multiply the fraction by the missing factors like this 
+	$\displaystyle \left(\frac{  missing\ factors}{missing\ factors}\right)  $
+        For instace, if the missing factor is $x+2$ then you need to build up the
+        fraction by multiplying it by 
+        $\displaystyle \left(\frac{x+2}{x+2} \right)$
+\end{enumerate}
+% ========== Example 6
+\begin{exa}
+\[
+		\frac{8}{(x-4)(x+3)}+\frac{3}{x-4} =?
+\]
+The LCD is $(x-4)(x+3)$. By comparing, we find out the second fraction is missing
+$x+3$, so build it up.
+\begin{align*}
+		&\frac{8}{(x-4)(x+3)}+\frac{3}{x-4}\left(\frac{x+3}{x+3} \right)\\
+        &\frac{8}{(x-4)(x+3)}+\frac{3(x+3)}{(x-4)(x+3)}
+\end{align*}
+Now their denominator is same, add their numerators
+\begin{align*}
+        &\frac{8+3(x+3)}{(x-4)(x+3)}\\
+        &\frac{8+3x+9}{(x-4)(x+3)}\\
+        &\frac{3x+17}{(x-4)(x+3)}\ \checkmark
+\end{align*}
+\end{exa}
+%========= Example 8
+\begin{exa}
+	\[
+		\frac{4x+2}{x^2+x-12} - \frac{3x+8}{x^2+6x+8} =?
+\]
+\end{exa}
+First, we need to factor each denominator
+\begin{align*}
+		&x^2+x-12 =(x-3)(x+4)	&	&x^2+6x+8=(x+4)(x+2)
+\end{align*}
+We can now find the LCD which is $(x-3)(x+4)(x+2)$. Compare each denominator with
+LCD and build them up:
+\begin{align*}
+		&\frac{4x+2}{(x-3)(x+4)}\left(\frac{x+2}{x+2}\right) -
+        	\frac{3x+8}{(x+4)(x+2)}\left( \frac{x-3}{x-3}\right)\\
+        &\frac{(4x+2)(x+2)}{(x-3)(x+4)(x+2)} -
+        	\frac{(3x+8)(x-3)}{(x+4)(x+2)(x-3)}\\
+\end{align*}
+Simplify and subtract
+\begin{align*}
+        &\frac{ 4x^2++10x+4 }{(x-3)(x+4)(x+2)} -
+        	\frac{ 3x^2-x-24 }{(x+4)(x+2)(x-3)}\\
+        &\frac{ 4x^2+10x+4-(3x^2-x-24) }{(x-3)(x+4)(x+2)}\\
+        &\frac{ x^2+11x+28 }{(x-3)(x+4)(x+2)}\  \checkmark
+\end{align*}

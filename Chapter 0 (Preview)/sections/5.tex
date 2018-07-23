@@ -1,0 +1,146 @@
+\chapter{Factoring}
+%%%%%%%%%%%%%%% SECTION HEADER %%%%%%%%%%%%%%%%
+\rhead{5}
+\lhead{Factoring}
+%%%%%%%%%%%%%%%%%%% START %%%$%%%%%%%%%%%%%%%%%
+\section{Factoring trinomials}
+In this section, we learn how to factor out trinomial in the forms of $ax^2+bx+c$ where $a,\,b\,$and $c$ are real numbers and $a\neq0$. This trinomial with degree of 2, is also called quadratic.
+There are two different cases:
+\begin{enumerate}[i.]
+    \item $a=1$
+    \item $a\neq1$.
+\end{enumerate}
+A trinomial can be factored as $\bigl(x+\boxed{?}\,\bigr)\bigl(x+\boxed{?}\,\bigr)$. We'll find two appropriate numbers to replace the questions' marks.
+% ===== SUBSECTION
+\subsection{Factoring trinomial when a=1}
+if $a=1$, we have \[
+    x^2+bx+c
+\]
+To factor this type of trinomial, we need to follow these steps:
+\vspace{0.5cm}
+\begin{tcolorbox}[title={Factoring Trinomial when $a=1$},
+colback=blue!5!white,
+colframe=blue!75!black,
+fonttitle=\bfseries]
+\begin{enumerate}[1]
+    \item Factor out \textit{gcf}, if possible
+    \item Find two numbers that their product is c\\ (don’t forget negative numbers).
+    \item Choose a pair whose their sum is b.
+    \item Replace questions marks with numbers you found.
+\end{enumerate}
+\end{tcolorbox}
+% =========== EXAMPLE 1
+\begin{exa}
+    Factor $x^2-10x+21$.
+\end{exa}
+\vspace{0.4cm}
+By comparing $x^2-10x+21$ with $ax^2+bx+c$, one can find out that
+$a=1, b=-10$ and $c=21$.\\
+Step 1. The \textit{gcf} is 1, so we skip this step.\\
+Step 2. We need to find two numbers whose their product is 
+$c=21$. Those numbers are
+\begin{center}
+\begin{tabular}{cr}
+\toprule
+\multicolumn {2}{ c }{Factors of 21}  \\
+\midrule
+    1 & 21\\
+    -1 & -21\\
+    3 & 7\\
+    -3 & -7\\
+\bottomrule
+\end{tabular}
+\end{center}
+Step 3.  We choose a pair that their sum is $b=-10$. Numbers $-3$ and $-7$ work.\\
+Step 4. Replace
+\begin{align*}
+        \bigl(x+\boxed{?}\,\bigr)\bigl(x+\boxed{?}\,\bigr)& &
+        &\text{Replace boxes with $-3$ and $-7$}\\
+        (x-3)(x-7)& &&\text{Our solution}
+\end{align*}
+% ==== EXAMPLE 2
+\vspace{0.2cm}
+\begin{exa}
+    Factor $x^2-13x-48$
+\end{exa}
+We have $a=1$, $b=-13$ and $c=-48$.\\
+Step 1. The \textit{gcf} is 1, so we can skip this step.\\
+Step 2. Here, we should find two numbers that their product is $c=-48$.
+\begin{center}
+\begin{tabular}{cr}
+\toprule
+\multicolumn {2}{ c }{Factors of $-48$}  \\
+\midrule
+    1 & -48\\
+    -1 & 48\\
+    2 & -24\\
+    -2 & 24\\
+    3 & -16 \\
+    -3 & 16\\
+    4 & -12\\
+    -4 & 12\\
+\bottomrule
+\end{tabular}
+\end{center}
+Step 3. Sum of $3$ and $-13$ yields $b=-13$.\\
+Step 4. Replace
+\begin{align*}
+        \bigl(x+\boxed{?}\,\bigr)\bigl(x+\boxed{?}\,\bigr)& &
+        &\text{Replace boxes with $3$ and $-13$}\\
+        (x+3)(x-13)& &&\text{Our solution}
+\end{align*}
+\newpage
+% ===== SUBSECTION
+\subsection{Factoring trinomial when a is not 1}
+When factoring trinomials we will use the \textbf{ac method} to split the middle term and then factor by grouping. In  this method, we must follow these steps:
+\begin{tcolorbox}[title={Factoring Trinomial when $a\neq1$},
+colback=blue!5!white,
+colframe=blue!75!black,
+fonttitle=\bfseries]
+\begin{enumerate}[1]
+    \item Factor out \textit{gcf}, if possible
+    \item Multiply a by c.
+    \item Find two numbers that their product is ac and their sum is b.
+    \item Use those factors to write the middle term, $bx$, as the sum of two term.
+    \item Factor by grouping.
+\end{enumerate}
+\end{tcolorbox}
+The ac method is named ac because we multiply $ac$ to find out what we want to multiply to. Other than this step, the process somehow the same as what we had.
+% ===== EXAMPLe 3
+\begin{exa}
+    Factor $3x^2+11x+6$.
+\end{exa}
+The \textit{gcf} is 1, so skip that step. Thus,
+\begin{align*}
+    3x^2+11x+6& &   &\text{Multiply $a=3$ by $c=6$}\\
+    &&&ac=(3)(6)=18\\
+    &&&\text{Find two numbers, multiply to 18 and add to 11}\\
+    3x^2+2x+9x+6&   &&\text{Numbers are 2 and 9, split the middle term}\\
+    3x(x+3)+2(x+3)& &&\text{Factor by grouping}\\
+    (x+3)(3x+2)&    &&\text{Our solution}
+\end{align*}
+% ====== EXAMPLE 5
+\vspace{0.2cm}
+\begin{exa}
+    Factor $10x^2-27x+5$.
+\end{exa}
+The \textit{gcf} is 1, so skip that step. Thus,
+\begin{align*}
+    10x^2-27x+5& &   &\text{Multiply $a=10$ by $c=5$, so $ac=50$}\\
+    &&&\text{Find two numbers, multiply to 50 and add to -27}\\
+    10x^2-25x-2x+5&   &&\text{Numbers are -25 and -2, split the middle term}\\
+    5x(2x-5)-1(2x-5)& &&\text{Factor by grouping}\\
+    (2x-5)(5x-1)&    &&\text{Our solution}
+\end{align*}
+\newpage
+Not all trinomials can be factored in both cases. If there is no combinations that multiply and add correctly then we can say the trinomial is prime and cannot be factored.
+% ======== EXAMPLE 6
+\begin{exa}
+    Factor $3x^2+2x-7$.
+\end{exa}
+\begin{align*}
+    3x^2+2x-7& &   &\text{Multiply $a=3$ by $c=-7$, so $ac=-21$}\\
+    &&&\text{Find two numbers, multiply to -21 and add to 2}\\
+    &   &&\text{There are no numbers that multiply to $− 21$ and add to 2}
+\end{align*}
+Therefore, this trinomial cannot be factored and it is prime.
