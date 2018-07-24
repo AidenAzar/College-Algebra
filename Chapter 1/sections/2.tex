@@ -1,0 +1,224 @@
+\chapter{Linear and Rational Equations}
+%\addcontentsline{toc}{chapter}{1 Graphs}
+%%%%%%%%%%%%%%% SECTION HEADER %%%%%%%%%%%%%%%%
+\rhead{2}
+\lhead{Linear and Rational Equations}
+%%%%%%%%%%%%%%%%%%% START %%%$%%%%%%%%%%%%%%%%%
+\section{Linear equations in 1 variable}
+A linear equation in one variable $x$ is an equation that can be
+expressed in the form 
+\begin{equation}
+    ax+b =0
+    \label{linear_eq}
+\end{equation}
+where $a,b \in \mathbb{R}$ and $a\neq 0$.\\
+$x$ is our unknown and solving an equation in $x$ involves determining all values of $x$ that make our equation a true statement. Such values are solutions, or roots, of the equation. \\
+An example of a linear equation is $5x+10=0$. if we replace $x$ with $-2$, we obtain
+\begin{align*}
+        5(-2)+10 & =0\\
+        -10+10 & =0\quad \text{True statement}\  \checkmark
+\end{align*}
+Thus, $x=-2$ is a solution of the equation $5x+10=0$. We also say that $-3$ satisfies the equation $5x+10=0$. However, $x=1$, for example, does not satisfy the equation
+\begin{align*}
+        5(1)+10 & =0\\
+        5+10 & =0\\
+        15 & =0\quad \text{False statement\ \xmark}
+\end{align*}
+Therfore, $x=1$ is not our solution.
+% ============ SUB
+\subsection{Properties of equality}
+Two equations with exactly the same solutions are called equivalent equations. \\
+To solve an equation,  we try to simplify our equations in a way that the variable stands alone on one side of the equal sign. Here are the properties that we use an equations. In these properties $A$, $B$, and $C$ stand for any algebraic expressions, and the symbol $\Longleftrightarrow$ mean "is equivalent to".
+\begin{tcolorbox}[title=Properties of Equality,
+                    fonttitle=\bfseries,
+                    colframe=blue!70!red,
+                    colback=white]
+\begin{tabularx}{\textwidth}{XX}
+    \textbf{Property} & \textbf{Description}\\
+    {$A=B \Longleftrightarrow A+C=B+C$ \newline~\newline
+       $A=B \Longleftrightarrow A-C=B-C$ }
+    &   Adding or subtracting the same quantity to both sides of an equation gives an equivalent equations. \\
+     & \\
+    {$A=B \Longleftrightarrow CA=CB$ \newline~\newline
+     $\displaystyle A=B \Longleftrightarrow \frac{A}{C}=\frac{B}{C}$
+     }& Multiplying or dividing both sides of an equation by the same nonzero quantity gives an equivalent equations.
+\end{tabularx}
+\end{tcolorbox}
+\begin{nt}
+    These properties require that you perform the same operation on both sides of an equation when solving it.  
+\end{nt}
+\begin{nt}
+    LHS is just a short way of saying the left-hand side of an equation. Likewise, RHS stands for "right-hand side" of the original equations.
+\end{nt}
+\section{Solving a linear equation}
+To solve equations, the general rule is to \textit{isolate} the variable; In other words, changing the equation to an equivalent equation with all terms that have variable $x$ on one side and all constant terms on the other.
+
+
+\begin{tcolorbox}[title=Steps to solve an equation,
+                colframe=blue!75!red,
+                colback=white,
+                fonttitle=\bfseries ]
+ \begin{enumerate}[(1)]
+     \item \textbf{Simplify} each side separately by clearing parentheses, using the distributive property as needed, and combining like terms.
+     \item  \textbf{Move} all terms with variables on one side and all numbers (constant terms) on the other.
+     \item \textbf{Isolate} the variable.
+     \item \textbf{Check} your answer.
+ \end{enumerate}   
+\end{tcolorbox}
+We often express our final answer in set notation, called the solution set. 
+% ========= EXAMPLE 1
+\begin{exa}
+    Solve and check $4x+5=29$.
+\end{exa}
+\begin{align*}
+    4x+5= 29&   &   &\text{Each side's been already simplified}\\
+    4x+5\textcolor{red}{-5} = 29 \textcolor{red}{-5}&   &
+    &\text{Subtract 5 from both sides}\\
+    4x = 24&    &   &\text{Divide both sides by 4}\\
+    x = 6&  &   &\text{Our answer}
+\end{align*}
+\textit{check.} Replace $x$ with 6 in the original equations
+\begin{align*}
+    4\cdot\textcolor{red}{6} +5 & \stackrel{?}{=} 29 \\
+    24+5 & \stackrel{?}{=} 29\\
+    29 & = 29\ \checkmark 
+\end{align*}
+The solution set is $\{6\}$
+% =========== EXAMPLE 2
+
+\vspace{0.4cm}
+\begin{exa}
+    Solve and check $4(2x+1) =29+3(2x-5)$.
+\end{exa}
+\begin{align*}
+    4(2x+1) = 29 + 3(2x-5)& &   &\text{Simplify using distributive}\\
+    8x+4 = 29 + 6x-15&  &   &\text{Combine like terms}\\
+    8x+4 = 6x+14&   &   &\text{Subtract 6x from both sides}\\
+    8x+4\textcolor{red}{-6x}=6x+14\textcolor{red}{-6x}& &\
+    &\text{Simplify}\\
+    2x+4 = 14&  &&\text{Subtract 4 from both sides}\\
+    2x+4\textcolor{red}{-4}=14\textcolor{red}{-4}&    &&\text{Simplify}\\
+    2x = 10&    &   &\text{Divide both sides by 2}\\
+    x = 5&  &   &\text{Our answer}
+\end{align*}
+\textit{check.} Substitute $x=5$ in the original equations
+\begin{align*}
+    4(2\textcolor{red}{(5)}+1) &\stackrel{?}{=} 29 + 3(2\textcolor{red}{(5)}-5) \\
+    44 & \stackrel{?}{=} 29+15 \\
+    44 &= 44\ \checkmark
+\end{align*}
+The solution set is $\{5\}$.
+% ==========
+\begin{nt}
+    Sometimes we have fraction in our equation. In this case, we can get rid of all fraction by multiplying both sides by LCD.
+\end{nt}
+% =========== EXAMPLE 3
+\begin{exa}
+    Solve and check $\displaystyle \frac{x-3}{4}=\frac{5}{14}-\frac{x+5}{7}$
+\end{exa}
+\begin{align*}
+    \frac{x-3}{4}=\frac{5}{14}-\frac{x+5}{7}&   &&\text{The LCD of 4,14 and 7 is 28}\\
+    \textcolor{red}{28\biggl(}\frac{x-3}{4}=\frac{5}{14}-\frac{x+5}{7}\textcolor{red}{\biggr)}& &
+    &\text{Simplify}\\
+    7(x-3) = 2(5) -4(x+5)& &&\text{Use distributive property}\\
+    7x-21 = 10-4x-20&    &&\text{Combine like terms}\\
+    7x-21 = -4x-10&  &&\text{Add 4x to both sides}\\
+    7x-21 = -10 &    &&\text{Add 21 to both sides}\\
+    11x = 11&   &&\text{Divide both sides by 11}\\
+    x = 1&  &   &\text{Our solution}
+\end{align*}
+\textit{check.} Substitute $1$ for $x$ in the original
+equation. You should obtain $-1/2=-1/2$. This true statement confirms that the solution set is $\{1\}$.
+% ===========
+\section{Rational equations}
+A rational equation is an equation containing one or more rational expressions, such as 
+\begin{equation*}
+    \frac{1}{x}=\frac{1}{6}+\frac{5}{7x}
+\end{equation*}
+Although rational equations are not linear, it can simplify to one when we multiply by the LCD.
+\begin{exa}
+    Solve $\displaystyle \frac{5}{2x}=\frac{17}{18}-\frac{1}{3x}$
+\end{exa}
+The LCD of $2x$, $18$ and $3x$ is $18x$.
+\begin{align*}
+    \frac{5}{2x}=\frac{17}{18}-\frac{1}{3x}&    &&\text{Multiply both sides by LCD}\\
+    \textcolor{red}{18x\biggl(}\frac{5}{2x}=\frac{17}{18}-\frac{1}{3x}\textcolor{red}{\biggr)}& &&\text{Distribute}\\
+    9(5) = x(17)-6(1)&  &&\text{Add 6 to both sides}\\
+    45\textcolor{red}{+6} = 17x-6\textcolor{red}{+6}&   &&\text{Simplify}\\
+    51 =17x& &  &\text{Divide both side by 17}\\
+    3 = x& &&\text{Our solution}
+\end{align*}
+\textit{check.} Substitute $x=3$. We'll get a true statement $5/6=5/6$. Therefore, the solution set is $\{3\}$.
+\begin{nt}
+    Dividing any number by $0$ cause a problem because such a division is not defined. Thus, When you are checking the solution, those answers which makes the denominator $0$ are not acceptable.
+\end{nt}
+% ============ EXAMPLE
+\begin{exa}
+    Solve $\displaystyle \frac{x}{x-2}=\frac{2}{x-2}-\frac{2}{3}$.
+\end{exa}
+We begin by finding the LCD of all fractions. The LCD of $x-2$ and $3$ is $3(x-2)$. Now we multiply both sides by LCD
+\begin{align*}
+    \textcolor{red}{3(x-2)\biggl(}\frac{x}{x-2}=\frac{2}{x-2}-\frac{2}{3}\textcolor{red}{\biggr)}&   
+    &&\text{Distribute}\\
+    3(x) = 3(2) - (x-2)(2)& &&\text{Simplify}\\
+    3x = 6 - 2x+4&  &&\text{Combine like terms}\\
+    3x = -2x+10&    &&\text{Add $2x$ to both sides}\\
+    5x =10& &&\text{Divide both sides by 5}\\
+    x = 2&  &&\text{Our answer}
+\end{align*}
+\textit{check.} The most important part is checking. When we plug $x=2$ into the rational equations, we get
+\begin{align*}
+    \frac{x}{\textcolor{red}{2}-2}&=\frac{2}{\textcolor{red}{2}-2}-\frac{2}{3}\\
+     \frac{x}{0}&=\frac{2}{0}-\frac{2}{3}   
+\end{align*}
+Since the denominator became zero, therefore $x=2$ is not our answer. Thus, we don't have any solution and our solution set is $\phi$, the empty set.
+% ============ EXAMPLE 6
+\begin{exa}
+    Solve $\displaystyle \frac{1}{x+4}+\frac{1}{x-4}=\frac{22}{x^2-16}$
+\end{exa}
+To find the LCD, we first need to factor $x^2-16$. This denominator can be factored using difference of squares formula, 
+\begin{equation*}
+    x^2-16 = (x-4)(x+4)
+\end{equation*}
+Therefore the LCD of all denominators is $(x-4)(x+4)$. So multiply LCD by both sides
+\begin{align*}
+    \textcolor{red}{(x-4)(x+4)\biggl(}\frac{1}{x+4}+\frac{1}{x-4}=\frac{22}{(x-4)(x+4)}\textcolor{red}{\biggr)}&  &&\text{Distribute}\\
+    (x-4)+(x+4) = 22&   &&\text{Combine like terms}\\
+    2x = 22&    &&\text{Divide both sides by 2}\\
+    x  = 11& &&\text{Our answer}
+\end{align*}
+\textit{check.} we need to check our solution.$x=11$ does not make any denominater 0 and we'll get a true statement $22/{105} = {22}/{105}$. Thus, $x=11$ is our answer and the solution set is $\{11\}$.
+% ========== SUB SECTION
+\section{Types of equations}
+Equations are classified based on their solution sets. 
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+    \item \textbf{Identity}: An equation that is true for all real numbers. For example $x+3=x+2+1$. When solving this type of equations, we'll reach to a true statement $0=0$. This indicate that all real numbers can be our answer. The solution set can be expressed as \[\{x \mid x \in \mathbb{R}\} \]
+    \item \textbf{Conditional equation}: An equation that is not identity, but it is valid for at least one real number. This type of equations that we were solving so far, such as $2x+3=19$.
+    \item \textbf{Inconsistent equation}: An equation that is not true for any real numbers. Often when we are solving this type of equations, we reached to a false statement. For instance, $x=x+7$ has no solution, because we end up with $0=7$ while solving this equation. In this case, the solution set is $\phi$
+\end{enumerate}
+% ======= EXAMPLE 7
+\begin{exa}
+    Solve and determine whether the equation \[
+        4x-7 = 4(x-1) + 3
+    \]
+\end{exa}
+\begin{align*}
+    4x-7 = 4(x-1) + 3&  &&\text{Apply distributive property}\\
+    4x-7 = 4x-4 + 3&    &&\text{Combine like terms on RHS}\\
+    4x-7 = 4x-1&    &&\text{Subtract $4x$ from both sides}\\
+    -7 = -1&    &&\text{False statement\ \xmark}
+\end{align*}
+Because we got a false statement, this equation is inconsistent equation. Therefore, we have no solution and the solution set is $\phi$.
+% ======== EXAMPLE 8
+\begin{exa}
+    Solve and determine whether the equation \[
+        7x+9 = 9(x+1) -2x
+    \]
+\end{exa}
+\begin{align*}
+    7x+9 = 9(x+1) -2x&  &&\text{Apply distributive property}\\
+    7x+9 = 9x+9 -2x&    &&\text{Combine like terms on RHS}\\
+    7x+9 = 7x+9&    &&\text{Subtract $7x$ from both sides}\\
+    9 = 9&    &&\text{True statement}
+\end{align*}
+Here, we got a true statement which means that this equation is identity equation. Therefore, all real numbers are our solution and the solution set is $\left\{x \mid x \in \mathbb{R} \right\} $.

@@ -1,0 +1,217 @@
+\chapter{Complex Numbers}
+%\addcontentsline{toc}{chapter}{7.6 Imaginary Numbers}
+% SECTION HEADER
+\rhead{4}
+\lhead{Complex Numbers}
+%
+\section{Imaginary unit}
+When mathematics was first used, the primary purpose was
+for counting. Thus they did not originally use negatives, zero, fractions or irrational
+numbers. However, the ancient Egyptians quickly developed the need for “a
+part” and so they made up a new type of number, the ratio or fraction. The
+Ancient Greeks did not believe in irrational numbers (people were killed for
+believing otherwise). The Mayans of Central America later made up the number
+zero when they found use for it as a placeholder. Ancient Chinese Mathematicians
+made up negative numbers when they found use for them. \\
+The square roots of a negative number created enough
+of problem to stop many mathematician in their tracks. Square roots ask
+us to find a number, that when multiplied by itself, yield
+the number inside the root sign. The square root of nine is
+three because three times three is nine.
+\[ \sqrt{9}=3 \]
+But what about roots of negative numbers? What is the
+square root of negative nine? Positive three won’t work,
+and neither will negative three, so we’re stuck. 
+\[
+    \sqrt{-9}=? 
+\]
+Usually mathematicians would interpret this as the problem’s way of saying there
+are no solutions. Like 0 and negative numbers before, $\sqrt{-1}$ was generally regarded 
+with suspicion because it did not correspond to anything people could think of it in the real
+world. For this reason, $\sqrt{-1}$ was given the terrible names "imaginary" or "impossible".
+
+\vspace{0.4cm}
+A century or so later, Euler begin using the simple $i$ to indicate that $\sqrt{-1}$ exist,
+making the algebra less clunky. Unfortunately, the name imaginary stuck around and that's still
+we call these numbers today. In response, everything on the original number line gets the name
+"real". 
+	%
+	\begin{tcolorbox}[title={Imaginary unit $i$},fonttitle=\bfseries,
+	colframe=blue!70!red,
+	colback=white]
+	\begin{equation}
+	 i=\sqrt{-1},\,\text{thus} \quad i^2=-1 \label{img_num}
+	\end{equation}
+	\end{tcolorbox}
+	%
+Using this notation, we can express any negative radicand in terms of $i$
+\begin{equation*}
+    \sqrt{-a}=\sqrt{-1}\sqrt{a}=i\sqrt{a} 
+\end{equation*}
+\begin{tcolorbox}[title=
+                    Principle square root of a negative number,
+                    fonttitle=\bfseries,
+                    colframe=blue!70!red,
+	                colback=white]
+    \begin{equation}
+            \sqrt{-a}=i\sqrt{a} 
+             \label{break_i}
+    \end{equation}
+\end{tcolorbox}
+%============= Example 1
+\begin{exa}
+ \begin{align*}
+	a) \sqrt{-49} &=\sqrt{-1}\sqrt{49} =i\sqrt{49} = 7i &&&&\\
+	b) \sqrt{-31} &=\sqrt{-1}\sqrt{31} =i\sqrt{31}&&&&\\
+	c) \sqrt{-98} &=\sqrt{-1}\sqrt{98} =i\sqrt{98}=i\sqrt{2\cdot7^2}=7i\sqrt{2} &&&&\\
+ \end{align*}
+\end{exa}
+%============= END
+\begin{nt}
+	We cannot join two square roots using product rule, $\sqrt{a}\cdot \sqrt{b}=\sqrt{ab}$, when a and b are
+	both negative numbers. To multiply negative radicands, first use the definition of imaginary
+	number to take out $i$. Then multiply the radical with positive radicands. For example:
+	\begin{align*}
+	\sqrt{-8}\cdot\sqrt{-2}=i\sqrt{8}\cdot i\sqrt{2}&=i^2\sqrt{16}\\
+	&=(-1)\sqrt{4^2}\\
+	&=-4
+	\end{align*}
+\end{nt}
+% ===========
+\section{Complex Numbers}
+When we put together a real number and imaginary number, we obtain what we call a complex number.
+\begin{gather*}
+    \mathterm[a]{a}+ \mathterm[b]{bi}
+\end{gather*}
+\hspace*{4cm} Real Part\indicate{a}[out=0,in=-75]
+\hspace*{1cm} \indicate{b}[out=-45,in=-90] Imaginary Part 
+    
+    
+	\begin{tcolorbox}[title=Complex numbers,fonttitle=\bfseries,
+		colframe=blue!70!red,
+	    colback=white]
+	A complex number is a number that can be written in the form $a+bi$, where $a$, $b$ are real 
+	numbers. $a$ is called the \textbf{real part} and $bi$ is called the \textbf{imaginary part}.
+	\end{tcolorbox}
+	%
+Examples of complex numbers include 
+\begin{align*}
+    3i&       &       &-10i \\
+    4+6i&     &       &-1-2\sqrt{5}i\\
+    \vdots\quad &   &       &\qquad \vdots
+\end{align*}    
+% ==== SUBSECTION
+\subsection{Equality of complex numbers}
+Two complex numbers $a+bi$ and $c+di$ are equal if and only if $a=c$ and $b=d$; In other words, their real parts and
+their imaginary parts should be equal to each other.
+%============= Example 2
+\begin{exa}
+Find the real numbers if $-7+2yi\sqrt{3}=x+6i\sqrt{3}$
+ \begin{align*}
+	\emph{Real Parts:} \qquad -7 &= x\,\, \checkmark\\
+	\emph{Imaginary Parts:} \qquad 2y\sqrt{3} &= 6\sqrt{3}\longrightarrow y =3\,\, \checkmark
+ \end{align*}
+\end{exa}
+%============= END
+\begin{nt}
+When performing operations (add, subtract, multilpy, divide) we can handle $i$ just
+like we handle any other variable. This means when adding and subtracting complex
+numbers we simply add or combine like terms.
+\end{nt}
+%============= Example 3
+\begin{exa}
+    Simplify the following expression: $(3-4i)-(-2-18i)$
+\end{exa}
+Be careful with negatives!
+ \begin{align*}
+	(3-4i)-(-2-18i)& & &\text{Distribute -1}\\
+	3-4i+2+18i& & &\text{Combine like terms}\\
+	5+14i& & &\text{Our Solution}
+ \end{align*}
+
+%============= END
+\begin{nt}
+Multiplying with complex numbers is the same as multiplying with variables with
+one exception, we will want to simplify our final answer so there are no exponents
+on $i$.
+\end{nt}
+%============= Example 4
+\begin{exa}
+Multiply: $(3i)(7i)$
+\end{exa}
+ \begin{align*}
+	(3i)(7i)& & &\!\!\! \text{Multiply coefficients and $i$}\\
+	21i^2& & &\!\!\! \text{Simplify, $i^2=-1$}\\
+	21(-1)& & &\!\!\! \text{Multiply}\\
+	-21& &  &\!\!\!\text{Our Solution}
+ \end{align*}
+
+%============= Example 5
+\begin{exa}
+    Multiply: $(5i)(3i-2)$
+\end{exa}
+ \begin{align*}
+	(5i)(3i-2)& & &\text{Distribute $5i$ by $3i-2$}\\
+	15i^2-10i& & &\text{Simplify, $i^2=-1$}\\
+	15(-1)-10i& & &\text{Multiply}\\
+	-15-10i& &  &\text{Our Solution}\\
+ \end{align*}
+%============= Example 6
+\begin{exa}
+ Use the FOIL method to multiply: $(4-2i)(3-7i)$
+\end{exa}
+ \begin{align*}
+	(4-2i)(3-7i)& & &\text{FOIL}\\
+	12-28i-6i+14(i^2)& & &\text{Simplify, $i^2=-1$}\\
+	12-28i-6i+14(-1)& & &\text{Multiply}\\
+	12-28i-6i-14& & &\text{Combine like terms}\\
+	-2-34i& &  &\text{Our Solution}\\
+ \end{align*}
+
+%============= END
+\section{Conjugates}
+Imagine we have a complex number $a+bi$. Then a complex number obtained by changing the sign of imaginary part of the complex number is called the conjugate of $a+bi$.\\
+Conjugates are very important. If we multiply $a+bi$ by its conjugate $a-bi$, we obtain a real number.
+\begin{align*}
+    (a+bi)(a-bi) &= (a)(a)+(a)(-bi)+(bi)(a)+(bi)(-bi) \\
+    &=a^2-\cancel{abi}+\cancel{abi}-b^2i^2\quad 
+    (\text{we know}\ \ i^2=-1)\\
+    &=a^2-b^2(-1) =a^2+b^2
+\end{align*}
+	\begin{tcolorbox}[title=Conjugate of a complex number,fonttitle=\bfseries,
+	colframe=blue!70!red,
+	colback=white]
+    The complex conjugate of the number $a+bi$ is $a-bi$, and the complex conjugate of $a-bi$ is $a+bi$. The multiplication of complex conjugates yields a real number
+    \begin{equation*}
+        (a+bi)(a-bi) = a^2+b^2
+    \end{equation*}
+	\end{tcolorbox}
+\subsection{Rationalizing complex numbers}
+It is considered a bad practice o have a imaginary number in the denominator of a fraction. Because the goal of the division procedure is to obtain a real number in the number. To rationalize a fraction, or write it in a standard form, you should multiply the numerator and denominator of division by the complex conjugate of the denominator.
+ %============= Example 8
+\begin{exa}
+    Divide and then write it the following expression in the standard form:
+    \[ \frac{4+2i}{3+4i} \]
+\end{exa}
+ \begin{align*}
+	\frac{4+2i}{3+4i}& & &\text{Multiply by conjugate of denominator}\\
+	\frac{4+2i}{3+4i}\left(\frac{3-4i}{3-4i} \right)& & &\text{Multiply}\\
+	\frac{12-16i+6i-8i^2}{9+16}& & &\text{$i^2=-1$}\\
+ 	\frac{12-16i+6i+8}{9+16}& & &\text{Combine like terms in numerator}&&&&\\
+ 	\frac{20-10i}{25}& & &\text{Divide numerator by 25}&&&&\\
+ 	\frac{20}{25}-\frac{10}{25}i& & &\text{Simplify}&&&&\\
+ 	\frac{4}{5}-\frac{2}{5}i& & &\text{Our solution in the standard form}&&&&
+ \end{align*}
+% ========== EXAMPLE 9
+\begin{exa}
+    Divide and write it the following expression in the standard form:
+    \[ \frac{5i}{7+i} \]
+\end{exa}
+ \begin{align*}
+	\frac{5i}{7+i}& & &\text{Multiply by conjugate of denominator}\\
+	\frac{5i}{7+i}\left(\frac{7-i}{7-i} \right)& & &\text{FOIL}\\
+	\frac{35i-5i^2}{49+1}& & &\text{$i^2=-1$}\\
+ 	\frac{5-35i}{50}& & &\text{Divide the numerator by 50}\\
+ 	\frac{5}{50}-\frac{35}{50}i& & &\text{Simplify}\\
+ 	\frac{1}{10}-\frac{7}{10}i& & &\text{Our solution in the standard form}
+ \end{align*}

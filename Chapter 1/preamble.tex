@@ -1,0 +1,81 @@
+\usepackage{amsmath, amssymb, amsthm, array, booktabs,xfrac, mathrsfs}
+\usepackage{graphicx, tcolorbox, amsfonts, bm, multicol,multirow, booktabs}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr, lastpage,float}
+\usepackage[shortlabels]{enumitem}
+\usepackage{tikz,subfig}
+\usepackage{wrapfig}    % To wrap an image
+\usepackage{epigraph,tabularx}
+\usepackage{empheq}
+\usepackage{makecell} %to have a thicker hline (called xline)
+\usepackage[flushleft]{threeparttable}
+\usetikzlibrary{decorations.pathreplacing,angles,quotes}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+% Draw cross or circle in tikz environment
+\usetikzlibrary{shapes.misc}
+\tikzset{cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+cross/.default={6pt}}    % default radius will be 6pt. 
+%
+%\usepackage{capt-of}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{eucal}
+\usepackage[makeroom]{cancel}
+\renewcommand{\arraystretch}{1.2}
+\allowdisplaybreaks % to allow align goes to next page
+% Circle
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+        \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+% x mark
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\xmark}{\text{\ding{55}}}
+
+% Theorem 
+\theoremstyle{definition}
+\newtheorem{exa}{Example}[chapter]
+\newtheorem{nt}{Note}[chapter]
+\newtheorem{fact}{Fact}[chapter]
+% TABLE FOR INTERVAL NOTATION
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{10pt}
+\setlength\cellspacebottomlimit{4pt}
+\addparagraphcolumntypes{X}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+% Clickable Links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%x and y axis style 
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=middle, xlabel={$x$}, ylabel={$y$}}}
+\pgfplotsset{compat=1.15}
+
+%NO INDENT 
+\setlength\parindent{0pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    CHAPTER AND SECTION NUMBERING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%\setcounter{secnumdepth}{0} %To remove all numbering
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\Large\bfseries} % format
+  {}                % label
+  {0pt}             % sep
+  {\huge}           % before-code
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             COVER 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\input{cover/cover_design}

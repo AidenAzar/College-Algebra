@@ -1,0 +1,446 @@
+\chapter{Quadratic Equations}
+% SECTION HEADER
+\rhead{5}
+\lhead{Quadratic Equations}
+%
+The equation in the form $ax^2+bx+c=0$ is called quadratic equations ($a\neq 0$). There are 
+several methods to solve quadratic equations:
+\begin{itemize}
+	\item Factoring
+	\item Square Root Property
+	\item Completing the square
+	\item Quadratic Formula
+\end{itemize}
+\section{Zero-product principle}
+If an equation can be factored, the zero-product principle can be used to find its roots (zeros). This principle states that when the product of two factors equals zero, then at
+least one of the factors is zero
+\begin{tcolorbox}[title=Zero-product principle,         
+                    fonttitle=\bfseries,
+                    colframe=blue!70!red,
+                    colback=white]
+    \begin{equation}
+           \text{if}\  a\cdot b=0 \longrightarrow a=0\ \text{or}\  b=0.
+           \label{zero_product}
+    \end{equation}
+\end{tcolorbox}
+For example, consider the equation $(x+4)(x-3)=0$. Based on the zero-product principle, we can set each factor equal to zero and solve for x.
+\begin{align*}
+        x+4 &=0\,\,\longrightarrow\,\, x=-4\\
+        x-3 &=0\,\,\longrightarrow\,\, x=3
+\end{align*}
+Therefore the solution set is $\{-4,\,3\}$.
+\begin{nt}
+    Be very careful! We can use the zero-product principle if and only if one side of equation is 0. Thus, if the original equation is not set to zero, then first make one side of the equation 0 and then use this principle.
+\end{nt}
+\section{Factoring}
+In this method, we factor the quadratic equations completely. Then we apply the zero-factor property principle, setting each factor equal to zero to find the solutions.
+% ======= EXAMPLE 1
+\begin{exa}
+    Solve by factoring $3x^2-9x=0$.
+\end{exa}
+\vspace{-0.4cm}
+\begin{align*}
+    3x^2-9x=0&  &&\text{Factor out}\\
+    3x(x-9)=0&  &&\text{Set each factor to zero}\\
+    3x=0 \longrightarrow x=0&   &&\\
+    x-9=0  \longrightarrow x=9& &&
+\end{align*}
+The solution set is $\{0,\, 9\}$.
+% ========= EXAMPLE 2
+\begin{exa}
+    Solve by factoring $2x^2+x=1$.
+\end{exa}
+Begin by setting the equation equal to $0$.
+\begin{align*}
+    2x^2+x=1&   &&\text{Subtract 1}\\
+    2x^2+x-1=0& &&\text{Factor}\\
+    (2x-1)(x+1)=0&  &&\text{Use zero-product principle}\\
+    2x-1=0 \longrightarrow x=\frac{1}{2}&   &&\\
+    x+1=0  \longrightarrow x=-1& &&
+\end{align*}
+Thus, the solution set is $\left\{-1,\,1/2\right\}$.
+%============
+\section{Square root property}
+As you might expect, we can clear squares by using square root. 
+When we are taking square root we have two results: one will be positive, the other will be 
+negative. Let's say we are asked to solve \[
+	x^2=25
+	\]
+One of the solution is 5, because $(5)(5)=25$. The other one is -5, because $(-5)(-5)=25$.
+	\begin{tcolorbox}[title=The square root property,fonttitle=\bfseries,
+	colframe=blue!70!red,
+	colback=white]
+	If $x^2=a$, then $x=\pm\sqrt{a}$ for all real numbers a.
+	\end{tcolorbox}
+Therefore, if we have square on one side and a number on the other side,we can take a square root from both sides of that equation. Don't forget, taking square root create two answers: one is positive and the other one  is negative. In other words, you must always need to add $\pm$ signs.
+%======================= EXAMPLE 3
+\begin{exa}
+    Solve using the square root property: $x^2-121 =0$
+\end{exa}
+	\begin{align*}
+		x^2-121 =0& &&\text{Isolate part with exponent}\\
+		x^2 = 121& &&\text{Take square root form both sides}\\
+		\left(\sqrt{x^2} \right) =\pm\sqrt{121}& &&\text{Simplify}\\
+		x =\pm11&  &&\text{Our Solution}\\
+		\{-11,11\}\,\, \text{or} \,\, \{\pm11\}& 
+		&&\text{The solution set}\\
+	\end{align*}
+%======================= EXAMPLE 4
+\begin{exa}
+    Solve using the square root property: $x^2=18$
+\end{exa}
+	\begin{align*}
+		x^2 = 18& &&\text{Take square root form both sides}\\
+		\left(\sqrt{x^2} \right) =\pm\sqrt{18}&  &&\text{Simplify, $18$ is $2\cdot 3^2$}\\
+		x =\pm\sqrt{2\cdot 3^2}& &&\text{Take out 3}\\
+		x =\pm3\sqrt{2}& &&\text{Our Solution}\\
+		\left\{-3\sqrt{2},\,3\sqrt{2}\right\}\,\, \text{or} \,\, \left\{\pm 3\sqrt{2}\right\}& 
+		&&\text{The solution set}\\
+	\end{align*}
+%
+%======================= EXAMPLE 5
+\begin{exa}
+    Solve using the following quadratic equation: $5x^2+1 =46$
+\end{exa}
+%
+First, we need to isolate the part with the exponent.
+	\begin{align*}
+		5x^2+1 =46&          &&\text{Subtract $1$}\\
+		5x^2 = 45&           &&\text{Divide by 5}\\
+		x^2  = 9&            &&\text{Take square root}\\
+		%
+		\left(\sqrt{x^2} \right) =\pm\sqrt{9}& &&\text{Simplify}\\
+		%
+		x =\pm3& &&\text{Our Solution}\\
+		%
+		\{-3,\,3\}\,\, \text{or} \,\, \{\pm3\}&
+		&&\text{The solution set}\\
+	\end{align*}
+%
+\begin{nt}
+	Sometimes we might obtain roots that are complex numbers.
+\end{nt}
+%
+%======================= EXAMPLE 6
+\begin{exa}
+    Solve using the following quadratic equation: $3x^2 =-27$
+\end{exa}
+As always, isolate the $x^2$ first
+	\begin{align*}
+		3x^2 =-27& &&\text{Divide by $3$}\\
+		\left(\sqrt{x^2} \right) =\pm\sqrt{-9}& &&\text{Take square root}\\
+		x =\pm\sqrt{-9}& &&\text{Simplify, $\sqrt{-1}=i$}\\
+		x =\pm3i&  &&\text{Our Solution}\\
+		\{-3i,\,3i\}\,\, \text{or}\,\, \{\pm3i\}& &&\text{The solution set}\\
+	\end{align*}
+%
+%======================= EXAMPLE 7
+\begin{exa}
+    Solve the quadratic equation using the square root property:
+    $(2x+3)^2 =7$
+\end{exa}
+%
+	\begin{align*}
+		(2x+3)^2 =7& &&\text{Take square root}\\
+		\left(\sqrt{(2x+3)^2} \right) =\pm\sqrt{7}& &&\text{Simplify}\\
+		2x+3 =\pm\sqrt{7}& &&\text{Solve for $x$, subtract $3$}\\
+		2x =-3\pm\sqrt{7}& &&\text{Divide both sides by 2}\\
+		x =\frac{-3\pm\sqrt{7}}{2}& &&\text{Our Solution}\\
+        \left\{\frac{-3}{2}\pm\frac{\sqrt{7}}{2}\right\} &
+		&&\text{The solution set}
+	\end{align*}
+% ========= SECTION
+\section{Completing the square}
+Sometimes we have an equations that cannot be factored. Consider the following 
+equation: \[x^2 − 2x − 7 = 0\]
+The equation cannot be factored, however there are 
+two solutions to this equation,\[
+    1 + 2 \sqrt{2}\,\,\,\text{and}\,\, 1 − 2\sqrt{2}
+\]
+To find these two solutions we will use a method known as completing the square.\\
+Once we use completing the square method, we will change the quadratic into a perfect square which can easily be solved with the square root property. Although we might not use this method frequently, it is actually helpful to prove a lot of useful formula such quadratic formula, equation of ellipse, hyperbole and so forth. \\
+The following five steps describe the process used to complete the square. 
+%
+\begin{tcolorbox}[title=Completing the square,
+                    fonttitle=\bfseries,
+                    colframe=blue!70!red,
+                    colback=white]
+ \begin{enumerate}
+	\item If coefficient of $x^2$ is not 1, divide both sides by its coefficient.
+			Otherwise, skip this step.
+	\item Move the constant term to right-hand side.
+	\item Take the coefficient of $x$, divide it by 2, then square it. Add the
+			result to both left and right-hand side.
+	\item Factor the left-hand side. You will have a perfect square.
+	\item Solve by the square root property.	
+ \end{enumerate}	
+\end{tcolorbox}
+% =========== Example 6
+\begin{exa}
+	Solve $2x^2+20x+48=0$ using the completing the square method.
+\end{exa}
+First, we divide both sides by the coefficient of $x^2$, which is 2. 
+		\begin{align*}
+				\frac{1}{2}\left(2x^2+20x+48\right)&=\frac{1}{2}\left(0\right)\\
+				x^2+10x+24 &=0
+		\end{align*}
+Next step, subtract 24 from both sides
+		\[
+				x^2+10x = -24
+		\]
+Now the coefficient of $x$ is 10, so we must add $\left(\frac{1}{2}(10)\right)^2$
+to both sides,
+		\begin{align*}
+		x^2+10x +\left(\frac{1}{2}10\right)^2 = -24 +\left(\frac{1}{2}(10)\right)&^2   &&\\
+		x^2+10x +(5)^2 = -24 +(5)&^2  && \\	
+		x^2+10x+25 = 1& &&\text{Factor the left-hand side} \\
+		(x+5)^2 =1& &&\text{Use the square root property}\\
+		x+5 =\pm \sqrt{1}&  && \\
+		x  = -5 \pm 1& &&\text{Our solution} \\
+		\end{align*}
+Thus, our solutions are
+		\begin{empheq}[left={\empheqlbrace}]{align*}
+				x &=-5 + 1=-4\\[.2cm]
+				x &=-5 - 1=-6
+		\end{empheq}
+The solution set is $\{-6,\, -4\}$
+% =========== Example 7
+\begin{exa}
+	Solve $x^2-3x-2=0$ using the completing the square method.
+\end{exa}
+Coefficient of $x^2$ is 1, so skip the first step. Then move the constant term
+to the other side.
+\[
+			x^2-3x =2
+\]
+Coefficient of $x$ is -3. So divide -3 by 2 and add square of it to both sides
+\begin{align*}
+		x^2-3x+\left(\frac{1}{2}(-3)\right)^2 =2+\left(\frac{1}{2}(-3)\right)&^2 &&\\
+		x^2-3x+\left(\frac{9}{4}\right) = \frac{17}{4}& &&\\
+		x^2-3x+\left(\frac{9}{4}\right) = \frac{17}{4}& &&\text{Factor}\\
+		(x-\frac{3}{2})^2 = \frac{17}{4}& &&\text{Use the square root property}\\
+		x-\frac{3}{2} =\pm \sqrt{\frac{17}{4}}& &&\\
+		x  = \frac{3}{2}\pm \sqrt{\frac{17}{4}}&    &&
+\end{align*}
+The root $\sqrt{\frac{17}{4}}$ can be simplified to ${\frac{\sqrt{17}}{2}}$. So our solutions are
+		\begin{empheq}[left={x=\empheqlbrace}]{align*}
+				&\frac{3}{2}+{\frac{\sqrt{17}}{2}}= \frac{3+\sqrt{17}}{2}\\
+				&\\
+				&\frac{3}{2}-{\frac{\sqrt{17}}{2}}= \frac{3-\sqrt{17}}{2}
+		\end{empheq}
+The solution set is $\left\{\frac{3}{2}+{\frac{\sqrt{17}}{2}},\, \frac{3}{2}-{\frac{\sqrt{17}}{2}}\right\}$.\\[.4cm]
+As several of the examples have shown, when solving by completing the square we will often need to use fractions and be comfortable finding common denominators and adding fractions together. Once we get comfortable solving by completing the square and using the five steps, any quadratic equation can be easily solved.
+%
+\section{Quadratic formula}
+The general from of a quadratic is $ax^2 + bx + c = 0$. By using the completing the square method
+, we can find a formula to solve any quadratic equations. To begin, we divide both sides by 
+$a$,\[
+				x^2+\left(\frac{b}{a}\right)x+\frac{c}{a}=0
+\]
+Then, move the constant term $\frac{c}{a}$ to the other side
+\[
+				x^2+\left(\frac{b}{a}\right)x = -\frac{c}{a}
+\]
+Add the square of half of the coefficient of $x$, i.e. $\left(\frac{b}{2a}\right)^2$, to both
+sides
+\[
+			x^2+\left(\frac{b}{a}\right)x+\left(\frac{b}{2a}\right)^2 = \left(\frac{b}{2a}\right)^2-\frac{c}{a}
+\]
+On the left-hand side, we have a perfect square,
+\[
+			\left(x+\frac{b}{2a}\right)^2 = \left(\frac{b}{2a}\right)^2-\frac{c}{a}\]
+Now, simplify the right-hand sides, and then take square root from both sides
+\begin{align*}
+			\left(x+\frac{b}{2a}\right)^2 &= \frac{b^2}{4a^2}-\frac{c}{a} \\
+			\left(x+\frac{b}{2a}\right)^2 &= \frac{b^2-4ac}{4a^2} \\
+			x+\frac{b}{2a} &=\pm\sqrt{ \frac{b^2-4ac}{4a^2} }\\
+			x+\frac{b}{2a} &=\pm\frac{\sqrt{b^2-4ac} }{ \sqrt{4a^2} }\\
+			x+\frac{b}{2a} &=\pm{ \frac{\sqrt{b^2-4ac}}{2a}}
+\end{align*}
+Next step, we subtract $\frac{b}{2a}$ from both sides, we can find $x$
+\begin{align*}
+			x+\frac{b}{2a} &=\pm{ \frac{\sqrt{b^2-4ac}}{2a}}\\
+			x &=-\frac{b}{2a}\pm{ \frac{\sqrt{b^2-4ac}}{2a}}	 \\
+			x &=\frac{-b \pm \sqrt{b^2-4ac}}{2a}\qquad \qquad \blacksquare
+\end{align*}
+Using the above formula, we can find the zeros of any quadratic equations.
+\begin{tcolorbox}[
+                    title=Quadratic Formula,
+                    fonttitle=\bfseries,
+                    colframe=blue!50!red,
+                    colback=white]
+	The Roots of \ $ax^2+bx+c=0$\  are
+	\begin{equation}
+					x =\frac{-b \pm \sqrt{b^2-4ac}}{2a}	\label{quad} \\
+	\end{equation}
+\end{tcolorbox}
+% ==========
+\begin{nt}
+As we are solving using the quadratic formula, it is important to remember the equation must first be equal to zero.	
+\end{nt}
+% ===========Example 1
+\vspace{0.4cm}
+\begin{exa}
+	Solve \ $x^2+3x=-2$.
+\end{exa}
+First we need to set the equation equal to zero, so add 2 to both sides \[
+			x^2+3x+2=0
+\]
+By comparing the above equation with $ax^2+bx+c=0$, we get $a=1$, $b=3$ and $c=2$. Substituting
+them into quadratic formula \eqref{quad} yields
+		\begin{align*}
+			x =\frac{-b \pm \sqrt{b^2-4ac}}{2a}&   &&\text{The quadratic formula}\\
+			x =\frac{-(3) \pm \sqrt{(3)^2-4(1)(2)}}{2(1)}&  &&\text{Substitute}\\
+			x =\frac{-3 \pm \sqrt{9-8}}{2}& &&\text{Simplify}\\
+	    	x =\frac{-3 \pm \sqrt{1}}{2}&&  &\text{We know, $\sqrt{1}=1$}\\
+			x =\frac{-3 \pm 1}{2}&  &&\text{Simplify} \\
+			x=-1\,\,\text{or}\,\,x=-2& &&\text{Our solutions}
+		\end{align*}
+The solution set is $\{-2,\,-1\}$.
+% ============ EXAMPLE 2
+\vspace{0.4cm}
+\begin{exa}
+    Solve $x^2=x+3$.
+\end{exa}
+\begin{align*}
+    x^2=x+3&    &   &\text{Set the equation equal to $0$}\\
+    x^2-x-3=0&    &   &\text{$a=1$, $b-1$ and $c=-3$}\\
+    x =\frac{-b \pm \sqrt{b^2-4ac}}{2a}& &&\text{Use the quadratic formula}&\\
+    x =\frac{-(-1) \pm \sqrt{(-1)^2-4(1)(-3)}}{2(1)}&  &&\text{Simplify}\\
+    x =\frac{1 \pm \sqrt{13}}{2}&  &   &\text{Our solutions}
+\end{align*}
+Often we need to break up the fraction. So our answers will be
+$\frac{1}{2} \pm \frac{\sqrt{13}}{2}$ and the solution set is
+$\{\frac{1}{2} - \frac{\sqrt{13}}{2},\,\frac{1}{2}+ \frac{\sqrt{13}}{2}\}$.
+% ======== EXAMPLE 3
+\vspace{0.4cm}
+\begin{exa}
+    Solve $3x^2+4x+8=2x^2+6x-5$.
+\end{exa}
+First we need to set the quadratic equation equal to zero.
+\begin{align*}
+    3x^2+4x+8=2x^2+6x-5&        &   &\text{Subtract $2x^2$}\\
+    x^2+4x+8=6x-5&              &   &\text{Subtract $6x$}\\
+    x^2-2x+8=-5&                &   &\text{Add 5}\\
+    x^2-2x+13=0&                &   &\text{The standard form}
+\end{align*}
+%
+So $a=1$, $b=-2$ and $c=13$, thus
+	\begin{align*}
+		x =\frac{-b \pm \sqrt{b^2-4ac}}{2a}&   &&\text{The quadratic formula}\\
+		x =\frac{-(-2) \pm \sqrt{(-2)^2-4(1)(13)}}{2(1)}&
+		&   &\text{Substitute}\\
+		%
+		x =\frac{2 \pm \sqrt{4-52}}{2}&   &&\text{Simplify}\\
+		%
+		x =\frac{2 \pm \sqrt{-48}}{2}& &   
+		&\text{$\sqrt{-48}=i\sqrt{48}$}\\
+		%
+		x =\frac{2 \pm i\sqrt{48}}{2}& &   
+		&\text{48 is $16\cdot 3$ (16 is a perfect square)}\\
+		%
+		x =\frac{2 \pm i\sqrt{16\cdot 3}}{2}& &&\text{3 will remain inside, take out 16} \\
+		%
+	    x =\frac{2 \pm 4i\sqrt{3}}{2}& &&\text{Reduce them by dividing by 2} \\
+	    x =1 \pm 2i\sqrt{3}& &&\text{Our solutions}
+	\end{align*}
+The solution set is $\left\{1 -2i\sqrt{3},\,1+ 2i\sqrt{3}\right\}$.
+% ============
+\vspace{0.4cm}
+\begin{nt}
+When we use the quadratic formula we don’t necessarily get two unique answers.
+We can end up with only one solution if the square root simplifies to zero.	
+\end{nt}
+% =========== EXAMPLE 4
+\vspace{0.4cm}
+\begin{exa}
+Solve $4x^2-12x+9=0$.
+\end{exa}
+$a$, $b$ and  $c$ are 4, -12 and 9, respectively. Substitute them into the quadratic formula
+\eqref{quad}, we will find
+	\begin{align*}
+					x =\frac{-b \pm \sqrt{b^2-4ac}}{2a}& &&\text{The quadratic formula}\\
+					x =\frac{-(-12) \pm \sqrt{(-12)^2-4(4)(9)}}{2(4)}& &&\text{Substitute}\\
+					x =\frac{12 \pm \sqrt{144-144}}{8}& &&\text{Simplify}\\
+					x =\frac{12 \pm \sqrt{0}}{8}& &&\text{$\sqrt{0}$ is 0}\\
+					x =\frac{12}{8}& &&\text{Reduce by dividing by 4}\\
+					x =\frac{3}{2}& &&\text{Our solution}
+	\end{align*}
+The solution set is $\left\{\frac{3}{2}\right\}$.
+% ===========
+\vspace{0.2cm}
+\begin{nt}
+If a term is missing from the quadratic, we can still solve with the quadratic formula,
+we simply use zero for that term. The order is important, so if the term with $x$ is missing, we 
+have $b=0$, if the constant term is missing, we have $c = 0$.
+\end{nt}
+% ========== EXAMPLE 5
+\begin{exa}
+Solve $3x^2+8=0$.
+\end{exa}
+Since $x$ is missing that means $b=0$. $a$ and $c$ are 3 and 8, respectively. Plug them into the quadratic formula:
+	\begin{align*}
+					x =\frac{-b \pm \sqrt{b^2-4ac}}{2a}& &&\text{The quadratic formula}\\
+					x =\frac{-(0) \pm \sqrt{(0)^2-4(3)(8)}}{2(3)}& &&\text{Substitute}\\
+					x =\frac{\pm \sqrt{0-96}}{6}& &&\text{Simplify}\\
+					x =\frac{\pm \sqrt{-96}}{6}& && \text{96 is $16\cdot6$ (16 is a perfect square)}\\
+					x =\frac{\pm \sqrt{-16\cdot6}}{8}& &&\text{6 will remain inside, take our 16}\\
+					x =\frac{\pm 4i\sqrt{6}}{8}& &&\text{Reduce by dividing by 4}\\
+					x =\frac{\pm i\sqrt{6}}{2}& &&\text{Our Solution}
+	\end{align*}
+The solution set is $\left\{-\frac{i\sqrt{6}}{2},\,\frac{ i\sqrt{6}}{2}\right\}$.
+% ============
+\subsection{Discriminant}
+The square root of $b^2-4ac$ in the quadratic formula play an important role in how our zeros
+will look like. Often we denote it as $\Delta=b^2-4ac$ and is called discriminant. So we can
+rewrite the quadratic formula \eqref{quad} as\[
+					x =\frac{-b \pm \sqrt{\Delta}}{2a}
+											\]
+If $\Delta=0$,  then we will have \[
+					x =\frac{-b \pm \sqrt{0}}{2a}=\frac{-b}{2a}
+\]
+In this case, we will have only one solution. This unique solution is called the \textit{double root}.\\
+When $\Delta>0$, then $\sqrt{\Delta}$ will also be a positive real number. Thus, we will get two 
+\textit{distinct real zeros}. However, when $\Delta<0$, $\sqrt{\Delta}$ will be an imaginary
+number. In this case, we will get \textit{two complex numbers}.
+\begin{tcolorbox}[
+                    title={Discriminant $\bm{\Delta}$},
+                    fonttitle=\bfseries,
+                    colframe=blue!50!red,
+                    colback=white
+                    ]
+The discriminant of a quadratic function ,$ax^2+bx+c=0$ is defined as $\Delta=b^2-4ac$. There are 3 possibilities as follows:
+	\begin{center}
+	\begin{tabular}{ c c c}
+		Discriminant & & Roots \\
+		\hline \hline
+		$\Delta=0$ & & 1 root (double root) \\
+		$\Delta<0$ & & 2 complex roots \\
+		$\Delta>0$ & & 2 real roots \\
+		\bottomrule
+	\end{tabular}
+	\end{center}
+\end{tcolorbox}
+Moreover, we can predict more when $\Delta$ is positive. 
+\begin{itemize}
+	\item If $\Delta>0$ and $\Delta$ is a perfect square, then our two different
+			 solutions are rational. Such an equation can be solves by factoring.
+	\item If $\Delta>0$ and $\Delta$ is not a perfect square, our two different solutions
+			are irrational.
+\end{itemize}
+% ============ EXAMPLE 6
+\begin{exa}
+	Use the discriminant to determine what the type of solutions each of the following equations
+	has.
+	\begin{enumerate}[\bfseries (a)]
+	    \item $x^2-4x+13=0$ 
+	    \item $9x^2+6x-7=0$
+	    \item $9x^2+12x+4=0$
+	\end{enumerate}
+\end{exa}
+(a) $a=1$, $b=-4$ and $c=13$, so $\Delta=(-4)^2-4(1)(13)=-36$. Since $\Delta<0$ we have
+two complex solutions.\\
+\\(b) Here we have $a=9$, $b=6$ and $c=-7$, so $\Delta=(6)^2-4(9)(-7)=288$. Because $\Delta>0$ 
+and it is not a perfect square, so we have two different irrational solutions.\\
+\\(c) We have $a=9$, $b=12$ and $c=4$, so $\Delta=(12)^2-4(9)(4)=0$. Therefore, we have a double
+root (one solution).

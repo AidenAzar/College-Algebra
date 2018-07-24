@@ -1,0 +1,508 @@
+\chapter{Other type of equations}
+%\addcontentsline{toc}{chapter}{7.6 Imaginary Numbers}
+% SECTION HEADER
+\rhead{6}
+\lhead{Other type of equations}
+%%%% START
+Up until now, we learn how to solve linear equations, rational equations and quadratic equations. Rational equations and quadratic equations are two examples of non-linear equations. In this section, we will learn to solve other types of non-linear equations
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+    \item Polynomial equations of degree 3 or higher.
+    \item Radical equations.
+    \item Equations with rational exponents.
+    \item Equations that are quadratic in form.
+    \item Absolute value equations.
+\end{enumerate}
+% ===== SECTION
+\section{Polynomial equations of degree 3 or higher}
+When a polynomial sets to zero, we have a polynomial equations. Examples are $x^3+2x-3=0$, $-x^6+x^4+x^2=0$, and $5x^4-7x^3=0$.\\
+As you might remember from chapter 0, the degree of a polynomial is the highest exponent of the variable. \\
+If the degree is 1, we have a linear equations such as $2x+8=0$. If the degree is 2, then we get a quadratic equations, for example $-7x^2-8x+3=0$. In this section, we will focus on solving polynomial equations of degree 3 or higher.
+\vspace{0.2cm}
+\begin{tcolorbox}[title=Solving a polynomial equations by factoring, 
+colback=blue!5!white,
+colframe=blue!75!black,
+fonttitle=\bfseries]
+\begin{enumerate}
+    \item \textbf{Move} all terms to one side, thereby obtaining $0$ on the other side
+    \item \textbf{Factor out} completely.
+    \item Use \textbf{zero-product principle}.
+\end{enumerate}
+\end{tcolorbox}
+% ===== EXAMPLE 1
+\begin{exa}
+ Solve by factoring $4x^4=12x^2$.
+\end{exa}
+\begin{align*}
+            4x^4=12x^2& &   &\text{Set equation equal to 0, Subtract $12x^2$}\\
+            4x^4-12x^2=0&   &   &\text{Common factor is $4x^2$, factor out}\\
+            4x^2(x^2-3)=0&    &   &\text{Use zero-product principle}\\
+            &&&\\
+            \text{Set each factor equal to zero:}&&&\\
+            4x^2=0& &   &\quad x^2-3=0\\
+            x^2=0&    &   &\quad x^2=3\\
+            x=\pm \sqrt{0}& &  &\quad x=\pm \sqrt{3}\\
+            x=0&    &   &
+\end{align*}    
+If you check them you will see all of the answers working perfectly. Therefore the solution set is $\{-\sqrt{3},\,0,\,\sqrt{3} \}$.
+% =========
+\begin{nt}
+    Often we have 4 terms and you need to use factoring by grouping. First, group terms with common factors, then factor out \textit{gcf}. Finally, factor out the binomial binomial and use zero-product principle to find the solutions. 
+\end{nt}
+% ====== Example 2
+\begin{exa}
+  Solve by factoring $2x^3+3x^2=8x+12$
+\end{exa}
+\begin{align*}
+    2x^3+3x^2=8x+12&    &   &\text{Set one side equal to 0}\\
+    &&&\text{Subtract $8x$ and $12$ from both sides}\\
+    2x^3+3x^2-8x-12=0&  &   &\text{Factor $x^2$ from first two terms}\\
+    x^2(2x+3)-8x-12=0&  &   &\text{Factor $-4$ from last two terms}\\
+    x^2(2x+3)-4(2x+3)=0&    &   &\text{Factor out the common binomial,}\\
+    &&&\text{$2x+3$, from each term}\\
+    (2x+3)(x^2-4)=0&    &&\text{Use zero-product principle}\\
+     &&&\\
+    \text{Set each factor equal to zero:}&&&\\
+            2x+3=0&   &   &\quad x^2-4=0\\
+            2x=-3&    &   &\quad x^2=4\\
+            x=-\frac{3}{2}& &  &\quad x=\pm \sqrt{4}\\
+            &   &              &\quad x=\pm 2
+\end{align*}
+Check the three solutions by substituting them into the original equations. It can be verified that all of them satisfy the equations. Thus, the solution set is $\{-2,\,-3/2,\, 2\}$.
+% ======== SECTION
+\section{Radical equations}
+Here we look at equations that have roots in the problem. As you might expect, to clear a root we can raise both sides to an exponent. For instance, to clear a square root
+we can rise both sides to the second power or to clear a cubed root we can raise both sides to a third power. \\
+There is one catch to solving a problem with roots in
+it. Sometimes we end up with solutions that don’t actually work in the equation, particularly when the index on the root is even. So for these problems it will be very important to check our answer(s). If a value does not work it is called an \textbf{extraneous solution} and not included in the final solution.
+\vspace{0.2cm}
+\begin{tcolorbox}[
+                    title=Steps to solve a radical equation, 
+                    colback=blue!5!white,
+                    colframe=blue!75!black,
+                    fonttitle=\bfseries
+                    ]
+    \begin{enumerate}[1.]
+        \item Isolate the radical expression.
+        \item Raise both sides to an exponent (that exponent is actually the index of root. So if we have square root, square each side).
+        \item Solve for $x$.
+        \item Always check your answer if you had a square root (or any root with even index). Otherwise, you don't need to check.
+    \end{enumerate}
+\end{tcolorbox}
+%--------------------------EXAMPLE 3
+\begin{exa}
+    Solve the following radical equations:
+    \[
+            \sqrt{3x-8}=x-2
+    \]
+\end{exa}
+	\begin{align*}
+		\sqrt{3x-8}=x-2&	 & &\text{Even index! We have to check our answer(s)}\\
+		\left(\sqrt{3x-8}\right)^2=(x-2)^2&	 & &\text{Squaring both sides}\\
+		3x-8=x^2+4-4x&  &    &\text{Subtract $3x$}\\
+		-8 = x^2+4-7x&  &   &\text{Subtract $-8$}\\
+		0=x^2-4-7x&     &   &\text{Simplify RHS}\\
+		0=x^2-7x+12&    &   &\text{Factor trinomial}\\
+		0=(x-3)(x-4)&   &   &\text{Set each factor equal to zero}
+	\end{align*}
+	we will get two answers
+	\[ \begin{cases}
+		x-3=0  & \rightarrow x=3 \\
+		x-4=0  & \rightarrow x=4
+	\end{cases} \]
+	check.
+	\begin{align*}
+		\text{For}\,\, x=3:\sqrt{3(3)-8}&\stackrel{?}{=}3-2 & \text{For}\,\, x=4:\sqrt{3(4)-8}&\stackrel{?}{=}4-2\\
+		\sqrt{1}&\stackrel{?}{=}1 & \sqrt{4}&\stackrel{?}{=}2\\
+		1&=1\,\, \checkmark & 2&=2\,\,\checkmark
+	\end{align*}
+
+Therefore, the solution set is $\{1,\,2\}$.
+%--------------------------exa 4
+\begin{exa}
+Solve the following radical equations:
+\[
+    \sqrt[3]{x-1}=-4
+\]
+\end{exa}
+	\begin{align*}
+		\sqrt[3]{x-1}=-4& & &\text{Odd index! we don't need to check answer(s)}\\
+		\left(\sqrt[3]{x-1}\right)^3=-4&^3 & &\text{Cube both sides}\\
+		x-1=-64& & &\text{Add 1}\\
+		x=-63& & &\text{Our Solution}
+	\end{align*}
+% ===========
+\begin{nt}
+If the radical is not alone on one side of the equation we will have to solve for the
+radical before we raise it to an exponent. This is often referred to as \textit{isolating the radical term.}
+\end{nt}
+%--------------------------exa 5
+\begin{exa}
+    Solve the following radical equation:
+    \[
+        -4+\sqrt{4+x}=x
+    \]
+\end{exa}
+	\begin{align*}
+		-4+\sqrt{4+x}=x& & &\text{Even index! Need to check our solutions}\\
+		\sqrt{4+x}=4+x& & &\text{Isolate radical by adding $4$ to both sides}\\
+		\left(\sqrt{4+x}\right)^2=(4+x)&^2 & &\text{Square both sides}\\
+		4+x=16+x^2+8x& & &\text{Subtract $4+x$ from both sides}\\
+		0=16+x^2+8x-(x+4)& & &\text{Combine like terms, rearrange terms}\\
+		0=x^2+7x+12& & &\text{Factor}\\
+		0=(x+3)(x+4)& & &\text{Set each factor equal to zero}
+	\end{align*}
+		we will get two answers
+	\[ \begin{cases}
+		x+3=0  & \rightarrow x=-3 \\
+		x+4=0  & \rightarrow x=-4
+	\end{cases} \]
+	check.
+	\begin{align*}
+		\text{For}\,\, x=-3:-4+\sqrt{4-3}&\stackrel{?}{=}-3 & \text{For}\,\, x=-4:-4+\sqrt{4-4}&\stackrel{?}{=}-4\\
+		-4+\sqrt{1}&\stackrel{?}{=}-3 & -4+0&\stackrel{?}{=}-4\\
+		-3&=-3\,\, \checkmark & -4&=-4\,\,\checkmark
+	\end{align*}
+Thus, the solution set is $\{-3,\,-4\}$.
+%--------------------------exa 6
+\begin{exa}
+    Solve the following radical equation: 
+    \[
+        x+\sqrt{4x+1}=5
+    \]
+\end{exa}
+	\begin{align*}
+		x+\sqrt{4x+1}=5& & &\text{Even index! Need to check our solutions}\\
+		\sqrt{4x+1}=5-x& & &\text{Isolate radical}\\
+		\left(\sqrt{4x+1}\right)^2=(5-x)&^2 & &\text{Square both sides}\\
+		4x+1=25+x^2-10x& & &\text{Subtract $4x+1$ from both sides}\\
+		0=25+x^2-10x-(4x+1)& & &\text{Combine like terms, rearrange terms}\\
+		0=x^2-14x+24& & &\text{Factor}\\
+		0=(x-2)(x-12)& & &\text{Set each factor equal to zero}
+	\end{align*}
+we will get two answers
+	\[ \begin{cases}
+		x-2=0  & \rightarrow x=2 \\
+		x-12=0  & \rightarrow x=12
+	\end{cases} \]
+	check.
+	\begin{align*}
+		\text{For}\,\, x=2:2+\sqrt{4(2)+1}&\stackrel{?}{=}5 & \text{For}\,\, x=12:12+\sqrt{4(12)+1}&\stackrel{?}{=}5\\
+		2+\sqrt{9}&\stackrel{?}{=}5 & 12+\sqrt{49}&\stackrel{?}{=}5\\
+		5&=5\,\, \checkmark & 19&=5\,\, \text{\xmark}
+	\end{align*}
+The solution set is $\{2\}$.
+% ===== SUB
+\subsection{Squaring each side twice}
+When there is more than one square root in the problem, after isolating one root and squaring both sides we may still have a root remaining in the problem. In this case we will again isolate the term with the second root and square both sides. When isolating, we will isolate the term with the square root. 
+%--------------------------exa 7
+\begin{exa}
+    Solve the following equation:
+    \[
+            \sqrt{x+5}-\sqrt{x-3}=2
+    \]
+\end{exa}
+
+	\begin{align*}
+		\sqrt{x+5}-\sqrt{x-3}=2& & &\text{Even Index! Need to check our answers}\\
+		\sqrt{x+5}=\sqrt{x-3}+2& & &\text{Isolate one of the roots}\\
+		\left(\sqrt{x+5}\right)^2=\left(\sqrt{x-3}+2\right)^2& & &\text{Square both sides}\\
+		x+5=(x-3)+4+4\sqrt{x-3}& & &\text{Combine like terms on RHS}\\
+		x+5=x+1+4\sqrt{x-3}& & &\text{Isolate the radical, subtract $x$}\\
+		5=1+4\sqrt{x-3}& & &\text{Subtract 1}\\
+		4=4\sqrt{x-3}&  &   &\text{Divide both sides by 4}\\
+    	1=\sqrt{x-3}&   &   &\text{Square each sides}\\
+		\left(1\right)^2=\left(\sqrt{x-3}\right)&^2 & &\text{Simplify}\\
+		1=x-3& & &\text{Add 3 to both sides}\\
+		4=x& & &\text{Our answer}
+	\end{align*}
+	check.\\
+	Because we had square root, we must check our answer!
+		\begin{align*}
+		\text{For}\,\, x=4:\sqrt{(4)+5}-\sqrt{(4)-3}&\stackrel{?}{=}2 &\\
+		\sqrt{9}-\sqrt{1}&\stackrel{?}{=}2 &&\\
+		3-1&=2\,\, \checkmark &&
+		\end{align*}
+The solution set is $\{4\}$
+%--------------------------END
+\vspace{0.4cm}
+\begin{nt}
+    Recall that 
+    \begin{empheq}[box=\widefbox]{align}
+        (a+b)^2 &= a^2+b^2+2ab \label{square_of_sum}\\
+        (a-b)^2 &= a^2+b^2-2ab \label{square_of_diff}
+    \end{empheq}
+    Most students make a mistake and square a binomial like this 
+    \begin{align*}
+        (a+b)^2\,=a^2+b^2\quad \xmark \\
+        (a-b)^2\,=a^2-b^2\quad \xmark
+    \end{align*}
+    which is absolutely wrong. If you don't recall the formula, try using the FOIL method. You will get the same answer as \eqref{square_of_sum} or \eqref{square_of_diff}.
+\end{nt}
+% ======== SECTION
+\section{Equations with rational exponents}
+The equation, $x^{m/n}=k$, is an example of a rational exponent equation. In such equations, we need to convert the rational exponent to its radical form using the following formula:
+\begin{equation}
+                x^{m/n} = \left(\sqrt[n]{x}\right)^m
+\end{equation}
+In other words, the denominator of a rational exponent becomes the index on our radical. Once we have done this, we clear the exponent $m$ by taking radical from both sides. Recall, if $m$ is even we must add $\pm$ to one side of the equation; otherwise, we don't do anything. \\
+Next, we will clear the index $n$ by raising both sides to $n$. Finally, we have our $x$ alone and we can solve for it. As always, don't forget to check your answers when $m$ is an even number.
+%
+\vspace{0.4cm}
+\begin{tcolorbox}[
+        title=Steps to solve a equation with rational exponent, 
+        colback=blue!5!white,
+        colframe=blue!75!black,
+        fonttitle=\bfseries]
+To solve a rational equation, $x^{m/n}=k$, follow these steps:
+    \begin{enumerate}[1.]
+        \item Isolate the term with rational exponent.
+        \item Convert the rational exponent to the radical form.
+                \[\left(\sqrt[n]{a}\right)^m = k\]
+        \item Clear $m$ by taking radical from both sides. If $m \in \mathbb{E}$,  add $\pm$ to one side of an equation.
+        \item Clear $n$ by raising both sides to power of $n$.
+        \item Solve for $x$
+        \item Check your solution(s) if $m \in \mathbb{E}$
+        \end{enumerate}
+\end{tcolorbox}
+% ======== EXAMPLE 9
+\begin{exa}
+    Solve $5x^{\frac{3}{2}}-25=0$.
+\end{exa}
+\begin{align*}
+        5x^{\frac{3}{2}}-25=0&  &   &\text{Isolate $x^{\frac{3}{2}}$, add 25 to both sides}\\
+        %
+        5x^{\frac{3}{2}}=25&    &   &\text{Divide both sides by 5}\\
+        %
+        x^{\frac{3}{2}}=5&      &   &\text{Convert it to the radical}\\
+        %
+        \left(\sqrt{x}\right)^3=5&   &   &\text{Take cube root}\\
+        %
+        \sqrt{x}=\sqrt[3]{5}&   &   &\text{Square both sides}\\
+        %
+        x = \left(\sqrt[3]{5}\right)^2& &   &\text{Simplify}\\
+        x=\sqrt[3]{25}&    &   &\text{Our solution}
+\end{align*}
+Since we didn't take any even roots, we don't need to check our solution. Thus, the solution set is $\{\sqrt[3]{25}\}$.
+% ======= EXAMPLE 10
+\vspace{0.4cm}
+\begin{exa}
+        Solve $x^{\frac{2}{3}}-8=-4$.
+\end{exa}
+\begin{align*}
+        x^{\frac{2}{3}}-8=-4&  &   &\text{Isolate $x^{\frac{2}{3}}$, add 8 to both sides}\\
+        %
+        x^{\frac{2}{3}}=4&  &   &\text{Convert it to the radical form}\\
+        %
+        \left(\sqrt[3]{x}\right)^2=4&  &   &\text{Take square root, add $\pm$}\\
+        %
+        \sqrt[3]{x}=\pm \sqrt{4}&  &   &\text{Simplify RHS}\\
+        %
+        \sqrt[3]{x}=\pm 2&  &   &\text{Cube both sides}\\
+        %
+        x=\left(\pm 2\right)^3&  &   &\text{Simplify RHS}\\
+        %
+        x = \pm 8&              &   &\text{Our solution}
+\end{align*}
+Because we took even root, we need to check our answers. One can verify that $-8$ and $8$ are both true solutions by substituting them into the original equation. Therefore, the solution set is $\{-8,\,8\}$.
+% ====== SECTION
+\section{Equations that are quadratic in form}
+Some equations are not quadratic but can be written as quadratic using an appropriate substitution. \\
+Consider the equation $x^4-8x^2-9=0$. Notice here that the variable of the first term is nothing more than the variable of the second term squared.
+\[
+            x^4 = \bigl(x^2\bigr)^2
+\]
+In other words, the exponent on the first term was twice the exponent on the second term. This, along with the fact that third term is a constant, means that this equation is reducible to quadratic in form.  We will solve this by first defining
+\[
+        u= x^2
+\]
+Using this substitution, we'll get
+\[
+        (\textcolor{red}{u})^2-8\textcolor{red}{u}^2-9=0
+\]
+The new equation, the one with the $u$’s,is a quadratic equation and we can solve that by factoring.
+\begin{align*}
+    u^2-8u^2-9 &=0\\
+    (u-9)(u+1) &=0
+\end{align*}
+we will get
+	\[ \begin{cases}
+		u-9=0  & \rightarrow u=9 \\
+		u+1=0  & \rightarrow u=-1
+	\end{cases} \]
+These are not the solutions that we’re looking for.  We want values of $x$, not values of $u$. To get values of $x$, all we need to substitute back $u=x^2$.
+	\[ \begin{cases}
+		u=9  & \rightarrow x^2=9 \\
+		u=0  & \rightarrow x^2=-1
+	\end{cases} \]
+Now we can find $x$,
+	\[ \begin{cases}
+		x^2=9   & \rightarrow x=\pm{\sqrt{9}}=\pm3 \\
+		x^2=-1  & \rightarrow x=\pm\sqrt{-1}=\pm{i}
+	\end{cases} \]
+Therefore we have four solutions. The solution set is $\{-3,\,3,\,-i,\,i\}$. In most cases to make the check if an equation is reducible to quadratic in form, all that we really need to do is to check that one of the exponents is twice the other.
+\vspace{0.4cm}
+\begin{tcolorbox}[title=How to find out an equation is in the quadratic form?, 
+colback=blue!5!white,
+colframe=blue!75!black,
+fonttitle=\bfseries]
+    \begin{enumerate}[1.]
+        \item There are 3 terms.
+        \item There is a constant term.
+        \item The exponent of the first term is \textbf{twice} the exponent of middle term.
+    \end{enumerate}
+    \tcbsubtitle[before skip=\baselineskip]{Steps to solve an equation that is in quadratic form}
+        \begin{enumerate}[1.]
+        \item Substitute $u=middle\ term$.
+        \item Your new equation will be a quadratic in form $au^2+bu+c=0$. Solve them using factoring or quadratic formula.
+        \item Once you found your solutions in terms of $u$, then substitute back $u=middle\ term$.
+        \item Solve for $x$.
+    \end{enumerate}
+\end{tcolorbox}
+% ======= EXAMPLE 11
+\begin{exa}
+        Solve: $x^4-5x^2+6=0$
+\end{exa}
+\begin{align*}
+    x^4-5x^2+6=0&   &   &\text{4 is twice of 2. We know $x^4=\left(x^2\right)^2$}\\
+    \left(x^2\right)^2-5x^2+6=0&&  &\text{Substitute $u=x^2$}\\
+    u^2-5u+6=0&        &   &\text{Factor or use quadratic formula}\\
+    (u-3)(u-2)=0&       &   &\text{Set each factor equal to 0}\\
+    u-3=0 \rightarrow \boxed{u=3}&      &   &\text{Equation (A)}\\
+    u-2=0 \rightarrow \boxed{u=2}&      &   &\text{Equation (B)}
+\end{align*}
+Now substitute back $u=x^2$ into both equations (A) and (B):
+\begin{align*}
+    &\text{Equation (A)}    &   &\text{Equation (B)}\\
+    &u=3                    &   &u=2\\
+    &\textcolor{red}{x^2}=3   &   &\textcolor{red}{x^2}=2\\
+    &x=\pm\sqrt{3}            &   &x=\pm\sqrt{2}
+\end{align*}
+The solution set is $\left\{ -\sqrt{3},\, -\sqrt{2},\, \sqrt{2},\, \sqrt{3}\right\}$.
+% ======= EXAMPLE 12
+\vspace{0.3cm}
+\begin{exa}
+        Solve $3x^{\frac{2}{3}}-11x^{\frac{1}{3}}-4=0$.
+\end{exa}
+\begin{align*}
+    3x^{\frac{2}{3}}-11x^{\frac{1}{3}}-4=0& &   
+    &\text{2/3 is twice of 1/3}\\
+    %
+    3(x^{\frac{1}{3}})^2-11x^{\frac{1}{3}}-4=0& &
+    &\text{Substitute $u=x^{\frac{1}{3} }$}\\
+    %
+    3u^2-11u-4=0&   &   &\text{Factor or use quadratic formula}\\
+    %
+    (3u+1)(u-4)=0&  &   &\text{Set each factor equal to 0}\\
+    %
+    3u+1=0 \rightarrow \boxed{u=-\frac{1}{3}}&  &   &\text{Equation (A)} \\
+    %
+    u-4=0 \rightarrow \boxed{u=4}&  &   & \text{Equation (B)}\\
+\end{align*}
+Next we Substitute back $\displaystyle u=x^{ \frac{1}{3} }$ into both equations (A) and (B):
+\begin{align*}
+    &\text{Equation (A)}    &   &\text{Equation (B)}\\
+    &u=-\frac{1}{3}         &   &u=4\\
+    %
+    &\textcolor{red}{x^{\frac{1}{3}}}=-\frac{1}{3}  &   
+    &\textcolor{red}{x^{ \frac{1}{3} }}=4\\
+    %
+    &\left(x^{ \frac{1}{3} }\right)^3=\left(-\frac{1}{3}\right)^3
+    &   &\left(x^{ \frac{1}{3} }\right)^3=4^{3}\\
+    &x=-\frac{1}{27}    &   &x=64
+\end{align*}
+The solution set is $\left\{-\frac{1}{3},\,64 \right\}$.
+% ======== EXAMPLE 13
+\begin{exa}
+        Solve $\bigl(x^2-4\bigr)^2+(x^2-4)-6=0$.
+\end{exa}
+If you look carefully, you will notice the equation contains $x^2-4$ and $x^2-4$ squared. So
+\begin{align*}
+    \bigl(x^2-4\bigr)^2+(x^2-4)-6=0&    &   
+    &\text{Let $u=x^2-4$}\\
+    u^2+u-6=0&  &   &\text{Factor}\\
+    (u+3)(u-2)=0&   &   &\text{Set each factor equal to 0}\\
+    u+3=0 \rightarrow \boxed{u=-3}& &&\text{Equation (A)}\\
+    u-2=0  \rightarrow  \boxed{u=2}&    &&\text{Equation (B)}
+\end{align*}
+Substitute back $u=x^2-4$ into both (A) and (B), then solve for $x$
+\begin{align*}
+    &\text{Equation (A)}    &   &\text{Equation (B)}\\
+    &u=-3                   &   &u=2\\
+    &x^2-4 = -3             &   &x^2-4=2\\
+    &x^2=1                  &   &x^2=6\\
+    &x=\pm 1        &   &x=\pm{\sqrt{6}}\\
+\end{align*}
+The solution set is $\left\{-\sqrt{6},\,-1,\,1,\,\sqrt{6}\right\}$.
+% ======== SECTION
+\section{Absolute value equations}
+When solving equations with absolute value we can end up with more than one possible answer. This is because what is in the absolute value can be either negative or positive and we must account for both possibilities when solving equations.
+\begin{tcolorbox}[
+                    title=Absolute value rule,
+                    fonttitle=\bfseries,
+                    colframe=blue!70!red,
+                    colback=white
+                    ]
+    If $|x|=a$ then 
+    \[
+            x=a\quad \text{or}\quad x=-a
+    \]
+\end{tcolorbox}
+When we have absolute values in our problem it is important to first isolate the absolute value, then remove the absolute value by considering both the positive and negative solutions.
+\begin{tcolorbox}[title=Steps to solve an absolute value equation, 
+colback=blue!5!white,
+colframe=blue!75!black,
+fonttitle=\bfseries]
+    \begin{enumerate}
+        \item Isolate the absolute value term.
+        \item Remove the absolute value and add $\pm$.
+        \item Solve for $x$.
+    \end{enumerate}
+\end{tcolorbox}
+% ===== EXAMPLE 14
+\begin{exa}
+    Solve $5|x|-4=6$
+\end{exa}
+\begin{align*}
+    5|x|-4=6&   &   &\text{Isolate the absolute value,add 4 to both sides}\\
+    5|x|=10&    &   &\text{Divide both sides by 5}\\
+    |x|=2&  &   &\text{Absolute value can be positive or negative}\\
+    x=\pm 2&   &&\text{Our solution}
+\end{align*}
+The solution set is $\{-2,\,2\}$.
+% =============
+\begin{nt}
+    Notice we never combine what is inside the absolute value with what is outside the absolute value. This is very important as it will often change the final result to an incorrect solution.
+\end{nt}
+Often the absolute value will have more than just a variable in it. In this case we will have to solve the resulting equations when we consider the positive and negative possibilities. This is shown in following Example.
+% ====== EXAMPLE 15
+\begin{exa}
+    Solve $|2x-1|=5$
+\end{exa}
+\begin{align*}
+    |2x-1| = 5& &   &\text{Absolute value can be positive or negative}\\
+    2x-1=\pm 5& &   &\text{We get two equations}
+\end{align*}
+Solve each equation for $x$
+\[ \begin{dcases}
+    2x-1=5  &   \Longrightarrow   x=3\\
+    2x-1=-5 &   \Longrightarrow  x=-2
+\end{dcases}\]
+We have two solutions,$-2$ and $3$. The solution set is $\{-2,\, 3\}$.\\
+Again, it is important to remember that the absolute value must be alone first before we consider the positive and negative possibilities.
+% ======== EXAMPLE 16
+\begin{exa}
+    Solve $4|3-4x|-20=0$.
+\end{exa}
+\begin{align*}
+    4|3-4x|-20=0&   &   &\text{Isolate absolute value, add 20 to both sides}\\
+    4|3-4x| = 20&   &   &\text{Divide both sides by 4}\\
+    |3-4x| = 5& &   &\text{Absolute value can be positive or negative}\\
+    3-4x = \pm 5& &   &\text{We get two equation}
+\end{align*}
+We will get
+	\[ \begin{cases}
+		3-4x=5  & \Longrightarrow x=-\frac{1}{2} \\
+		&\\
+		3-4x=-5 & \Longrightarrow x=2
+	\end{cases} \]
+Therefore the solution set is $\left\{-\frac{1}{2},\,2 \right\}$.
