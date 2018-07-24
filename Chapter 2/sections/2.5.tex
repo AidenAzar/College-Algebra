@@ -1,0 +1,782 @@
+\chapter{Transformations of functions}
+%\addcontentsline{toc}{chapter}{1 Graphs}
+%%%%%%%%%%%%%%% SECTION HEADER %%%%%%%%%%%%%%%%
+\rhead{5}
+\lhead{Transformations of functions}
+%%%%%%%%%%%%%%%%%%% START %%%$%%%%%%%%%%%%%%%%%
+\section{Graph of common functions}
+We begin this section by introducing 6 common graphs in algebra. Knowing these graphs is essential for analyzing their transformations into more complicated graphs.
+% \begin{center}
+% \begin{tikzpicture}
+%     \draw [thin, gray, ->] (0,-2) -- (0,2)      % draw y-axis line
+%         node [above, black] {$y$};   % add label for y-axis
+
+%     \draw [thin, gray, ->] (-2,0) -- (2,0)      % draw x-axis line
+%         node [right, black] {$x$};              % add label for x-axis
+
+%     \draw [->,draw=red,ultra thick] (0,0) -- (1.5,1.5);% draw the graph
+%     \draw [<-, draw=red,ultra thick] (-1.5,1.5) -- (0,0);
+%     \node [below] at (0,0) {$(0,0)$};
+%     \node [right] at (1,1) {$(1,1)$};
+%     \node [left] at (-1,1) {$(-1,1)$};
+% \end{tikzpicture}
+% \end{center}
+%%%%%%% First and second common graph
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-3, xmax=3, ymin=-3, ymax=3, title={Identity function: $f(x)=x$}]
+	\addplot[{<->},domain=-2:2, ultra thick, red] {x};
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(-1,-1)};
+    \node [above left] at (0,0) {$(0,0)$};
+    \node [below right] at (1,1) {$(1,1)$};
+    \node [above left] at (-1,-1) {$(-1,-1)$};
+    \node [draw=none,text width=3cm] at (1.5,-2) {Always increasing};
+    \end{axis}
+\end{tikzpicture}
+\qquad 
+\begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-3, xmax=3, ymin=-3, ymax=3,
+	title={Absolute value function: $f(x)=|x|$}]
+	\addplot[{<->},domain=-2:2, ultra thick, red] {abs(x)};
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(-1,1)};
+    \node [below right] at (0,0) {$(0,0)$};
+    \node [below right] at (1,1) {$(1,1)$};
+    \node [below left] at (-1,1) {$(-1,1)$};
+    \node [draw=none,text width=3.5cm] at (1.6,-2) {V-shaped\\
+    decreasing: $(-\infty,0)$\\
+    increasing: $(0,+\infty)$};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+%%%%%% Third and forth common graph
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-3, xmax=3, ymin=-3, ymax=3, title={Constant function: $f(x)=k$}]
+	\addplot[{<->},domain=-2:2, ultra thick, red] {1};
+    \node [draw=none,text width=3cm] at (1.5,-2) {Not increasing nor decreasing};
+    \end{axis}
+\end{tikzpicture}
+\qquad 
+\begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-3, xmax=3, ymin=-3, ymax=3,
+	title={Standard quadratic function: $f(x)=x^2$}]
+	\addplot[{<->},domain=-1.5:1.5, ultra thick, red] {x*x};
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(-1,1)};
+    \node [below right] at (0,0) {$(0,0)$};
+    \node [below right] at (1,1) {$(1,1)$};
+    \node [below left] at (-1,1) {$(-1,1)$};
+    \node [draw=none,text width=3.5cm] at (1.6,-2) {U-shaped\\
+    decreasing: $(-\infty,0)$\\
+    increasing: $(0,+\infty)$};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+%%%%%%%% fifth and sixth common graph
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+		xmin=-5, xmax=5, ymin=-5, ymax=5, title={Standard cubic function: $f(x)=x^3$}]
+	\addplot[{<->},domain=-1.5:1.5, ultra thick, red] {x*x*x};
+	\addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(-1,-1)};
+	\node [below right] at (0,0) {$(0,0)$};
+    \node [right] at (1,1) {$(1,1)$};
+    \node [left] at (-1,-1) {$(-1,-1)$};
+    \node [draw=none,text width=3cm] at (2.4,-2) {Always increasing};
+    \end{axis}
+\end{tikzpicture}
+\qquad 
+\begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5,
+	title={Square root function: $f(x)=\sqrt{x}$}]
+	\addplot[{->},domain=0:4.8, ultra thick, red] {sqrt(x)};
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(4,2)};
+    \node [below left] at (0,0) {$(0,0)$};
+    \node [below right] at (1,1) {$(1,1)$};
+    \node [below] at (4,2) {$(4,2)$};
+    \node [draw=none,text width=3.5cm] at (3,-2) {Always increasing};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+% ======== SECTION
+\section{Vertical shifts}
+Consider $f(x)=|x|$ and let's say we want to graph $g(x)=|x|+2$. Here what we can say about $g(x)$:
+\begin{itemize}
+    \item [$\diamond$] Number 2 is added to $|x|$; In other words, it is added to $f$. Thus, this added number is directly affecting the $y$-coordinates of $f$. 
+    \item [$\diamond$] 2 units will be added to all $y$-coordinates of $f$.
+    \item [$\diamond$] So, the graph of $g(x)$ is actually the graph of $f(x)$ shifted 2 units vertically upward.
+\end{itemize}
+
+\begin{figure}[ht]
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-4, xmax=4, ymin=-4, ymax=4]
+	\addplot[{<->},domain=-2:2, ultra thick, black] {abs(x)};
+	\addplot[{<->},domain=-2:2, ultra thick, red] {abs(x)+2};
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(-1,1)};
+    %%%
+    \addplot[mark=*] coordinates {(0,2)};
+    \addplot[mark=*] coordinates {(1,3)};
+    \addplot[mark=*] coordinates {(-1,3)};
+    \node [below right] at (0,0) {$0$};
+    \node [below right] at (1,1) {$(1,1)$};
+    \node [below left] at (-1,1) {$(-1,1)$};
+    %%
+    \node [right] at (0,2) {$2$};
+    \node [right] at (1,3) {$(1,3)$};
+    \node [left] at (-1,3) {$(-1,3)$};
+    %%% arrows
+    \draw[myarrows] (0,0) -- (0,2);
+    \draw[myarrows] (-1,1) -- (-1,3);
+    \draw[myarrows] (1,1) -- (1,3);
+    %%% f(x) and g(x)
+    \node [right,red] at (2.1,3.6) {$\bm{g(x)}$};
+    \node [right] at (2.1,2) {$\bm{f(x)}$};
+
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{The graph of $f(x)=|x|$ and $g(x)=|x|+2$}
+\label{fig:vert_shift}
+\end{figure}
+Similarly, if we instead of $g(x)=|x|+2$, we had $h(x)=|x|-2$ then the graph of $h(x)$ is the graph of $f(x)$ shifted 2 units vertically downward.
+%
+%
+\begin{tcolorbox}[title=Vertical shifts,fonttitle=\bfseries,
+colframe=blue!75!black,colback=blue!10!white]
+Let $f$ be a function and $c$ a positive real number:
+\begin{itemize}[noitemsep]
+    \item $y=f(x)+c$ is the graph of $y=f(x)$ shifted $c$ units vertically upward by adding $c$ to the $y$-coordinates of the points on the graph of $f$.
+    \item $y=f(x)-c$ is the graph of $y=f(x)$ shifted $c$ units vertically downward by subtracting $k$ from the $y$-coordinates of the points on the graph of $f$.
+\end{itemize}
+\end{tcolorbox}
+% =========== section
+\section{Horizontal shifts}
+Consider $f(x)=\sqrt{x}$ and we want to graph $g(x)=\sqrt{x-1}$:
+\begin{itemize}
+    \item [$\diamond$] Number $-1$ is grouped with $x$. Thus, this number is affecting the $x$-values. 
+    \item [$\diamond$] We expect the graph shift 1 unit to the left.
+    \item [$\diamond$] However, 1 unit is adding to $x$-coordinates of $f$ and shifting the graph to the right \textbf{(an opposite effect)}.
+\end{itemize}
+Notice, when a number is grouped with $x$, it has a \textbf{opposite effect} from what initially looks like. We anticipate a horizontal shift 1 unit to the left. Instead, the graph moves to the right. 
+
+\begin{figure}[ht]
+\begin{center}
+    \begin{tikzpicture}[scale=1]
+\tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-1, xmax=7, ymin=-2, ymax=3]
+	\addplot[->,domain=-2:5, samples=500,smooth,ultra thick, black] {x^(0.5)};
+	\addplot[->,domain=-1:6,samples=700,smooth, ultra thick, red] {sqrt(x-1)};
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(4,2)};
+    \node [below left] at (0,0) {$0$};
+    \node [above] at (1,1.2) {$(1,1)$};
+    \node [above left] at (4,2) {$(4,2)$};
+    %%%
+    \addplot[mark=*] coordinates {(1,0)};
+    \addplot[mark=*] coordinates {(2,1)};
+    \addplot[mark=*] coordinates {(5,2)};
+    \node [below right] at (1,0) {$1$};
+    \node [below right] at (2,1) {$(2,1)$};
+    \node [below right] at (5,2) {$(5,2)$};
+    %%% arrows
+    \draw[myarrows] (0,0) -- (1,0);
+    \draw[myarrows] (1,1) -- (2,1);
+    \draw[myarrows] (4,2) -- (5,2);
+    %%% f(x) and g(x)
+    \node [right,red] at (5.9,2.5) {$\bm{g(x)}$};
+    \node [right] at (4.1,2.6) {$\bm{f(x)}$};
+
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{The graph of $f(x)=\sqrt{x}$ and $g(x)=\sqrt{x-1}$}
+\label{fig:hor_shift}
+\end{figure}
+
+Similarly, if we had $h(x)=\sqrt{x+2}$ then the graph of $h(x)$ is the graph of $f$ shifted 2 units to the left.
+%%%
+\begin{tcolorbox}[title=Horizontal shifts,fonttitle=\bfseries,
+colframe=blue!75!black,colback=blue!10!white]
+Let $f$ be a function and $c$ a positive real number:
+\begin{itemize}[noitemsep]
+    \item $y=f(x+c)$ is the graph of $y=f(x)$ shifted $c$ units to the left  by subtracting $c$ from the $x$-coordinates of the points on the graph of $f$.
+    \item $y=f(x-c)$ is the graph of $y=f(x)$ shifted $c$ units to the right by adding $c$ to the $x$-coordinates of the points on the graph of $f$.
+\end{itemize}
+\end{tcolorbox}
+% ========== SECTION
+\section{Vertical stretching or shrinking}
+Consider the graph of function $f(x)=|x|$. We are interest in graphing $g(x) = 2|x|$:
+\begin{itemize}
+    \item [$\diamond$] Number $2$ is multiplied by $|x|$ which is our $f$. Thus, this number is affecting $y$-coordinates of $f$. 
+    \item [$\diamond$] All $y$-coordinates of $f$ are multiplied by number 2.
+    \item [$\diamond$] So, the graph of $g$ is actually the graph of $f$ stretched along $y$-axis by factor of 2.
+\end{itemize}
+Likewise, When the graph is multiplied by a number between 0 and 1, like $h(x)=\frac{1}{3}|x|$, then the graph will shrink along $y$-axis by factor of $3$. 
+
+\begin{figure}[ht]
+\begin{center}
+    \begin{tikzpicture}[scale=1]
+\tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-4, xmax=4, ymin=-1, ymax=6]
+	\addplot[{<->},domain=-3:3, smooth,ultra thick, black] {abs(x)};
+	\addplot[{<->},domain=-2:2,smooth, ultra thick, red] {2*abs(x)};
+	\addplot[{<->},domain=-3:3,smooth, ultra thick, blue] {abs(x)/3};
+	%%%%%%
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(-1,1)};
+    \node [below left] at (0,0) {$0$};
+    \node [right] at (1,1) {$(1,1)$};
+    \node [left] at (-1,1) {$(-1,1)$};
+    %%%
+    \addplot[mark=*,red] coordinates {(1,2)};
+    \addplot[mark=*,red] coordinates {(-1,2)};
+    \node [above left,red] at (1.2,2) {\scriptsize $(1,2)$};
+    \node [above right,red] at (-1.2,2) {\scriptsize $(-1,2)$};
+    %%%
+    \addplot[mark=*,blue] coordinates {(1,0.333)};
+    \addplot[mark=*,blue] coordinates {(-1,0.333)};
+    \node [below right,blue] at (1.1,0.4) {\scriptsize $(1,1/3)$};
+    \node [below left,blue] at (-1.1,0.4) {\scriptsize $(-1,1/3)$};
+    %%% arrows
+    %\draw[myarrows] (0,0) -- (0,3);
+    %%% f(x) and g(x)
+    \node [right] at (2.5,3.3) {$\bm{f(x)}$};
+    \node [right,red] at (2,4.5) {$\bm{g(x)}$};
+    \node [right,blue] at (2.5,1.5) {$\bm{h(x)}$};
+
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{The graph of $f(x)=|x|$, $g(x)=2|x|$ and $h(x)=\frac{1}{3}|x|$}
+\label{fig:vert_strech}
+\end{figure}
+%%
+\newpage
+\begin{tcolorbox}[title=Vertical stretching or shrinking,fonttitle=\bfseries,
+colframe=blue!75!black,colback=blue!10!white]
+Let $f$ be a function and $c$ a positive real number:
+\begin{itemize}[noitemsep]
+    \item If $c>1$, then $y=cf(x)$ is the graph of $y=f(x)$ stretched along $y$-axis by multiplying $c$ by its $y$-coordinate.
+    \item If $0<c<1$, then $y=cf(x)$ is the graph of $y=f(x)$ shrunk along $y$-axis by multiplying $c$ by its $y$-coordinate.
+\end{itemize}
+\end{tcolorbox}
+% ====== SECTION
+\section{Horizontal stretching or shrinking}
+Consider the graph of function $f(x)=|x|$. We are looking for the graph of $g(x) = |4x|$:
+\begin{itemize}
+    \item [$\diamond$] Number $4$ is grouped with $x$; So, this number will change the $x$-coordinates of $f$.
+    \item [$\diamond$] Since it is grouped with $x$, it has a \textbf{opposite effect} and all $x$-coordinates of points on  $f$ will be divide by $4$.
+    \item [$\diamond$] Thus, the graph of $g(x)$ is actually the graph of $f$ shrunk along $x$-axis by factor of $4$.
+\end{itemize}
+Likewise, if the multiplier is between 0 and 1, such as $h(x)=|\frac{1}{2}x|$, then the graph will stretch along $x$-axis by factor of $2$. 
+\begin{figure}[ht]
+\begin{center}
+    \begin{tikzpicture}[scale=1.2]
+\tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-3, xmax=3, ymin=-1, ymax=6]
+	\addplot[{<->},domain=-3:3, smooth,ultra thick, black] {abs(x)};
+	\addplot[{<->},domain=-1:1,smooth, ultra thick, red] {abs(4*x)};
+	\addplot[{<->},domain=-3:3,smooth, ultra thick, blue] {abs(x/2)};
+	%%%%%%
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(-1,1)};
+    \node [below left] at (0,0) {$0$};
+    \node [right] at (1,1) {\tiny $ (1,1)$};
+    \node [left] at (-1,1) {\tiny $(-1,1)$};
+    %%%
+    \addplot[mark=*,red] coordinates {(1/4,1)};
+    \addplot[mark=*,red] coordinates {(-1/4,1)};
+    \node [above right,red] at (0.27,1) {\tiny $(\frac{1}{4},1)$};
+    \node [above left,red] at (-0.28,1.1) {\tiny $(-\frac{1}{4},1)$};
+    %%%
+    \addplot[mark=*,blue] coordinates {(2,1)};
+    \addplot[mark=*,blue] coordinates {(-2,1)};
+    \node [below right,blue] at (2,1) {\tiny $(2,1)$};
+    \node [below left,blue] at (-2,1) {\tiny $(-2,1)$};
+    %%% arrows
+    %\draw[myarrows] (0,0) -- (0,3);
+    %%% f(x) and g(x)
+    \node [right] at (2.1,3.3) {$\bm{f(x)}$};
+    \node [right,red] at (1,4.3) {$\bm{g(x)}$};
+    \node [right,blue] at (2.1,1.8) {$\bm{h(x)}$};
+
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{The graph of $f(x)=|x|$, $g(x)=|4x|$ and $h(x)=|\frac{1}{2}x|$}
+\label{fig:hori_strech}
+\end{figure}
+
+
+As you can see in Figure \ref{fig:hori_strech}, the point $(1,1)$ on $f(x)$ will become $(1/3,1)$ on $g(x)$ and will change to $(2,1)$ on $h(x)$.
+\begin{tcolorbox}[title=Horizontal stretching or shrinking,fonttitle=\bfseries,
+colframe=blue!75!black,colback=blue!10!white]
+Let $f$ be a function and $c$ a positive real number:
+\begin{itemize}[noitemsep]
+    \item If $c>1$, then $y=f(cx)$ is the graph of $y=f(x)$ shrunk along $x$-axis by dividing $c$ by its $x$-coordinate.
+    \item If $0<c<1$, then $y=f(cx)$ is the graph of $y=f(x)$ stretched along $x$-axis by dividing $c$ by its $x$-coordinate.
+\end{itemize}
+\end{tcolorbox}
+% ====== SECTION
+\section{Reflection about \texorpdfstring{$\bm{x}$}{TEXT}-axis}
+Let's consider $f(x) = \sqrt{x}$. The graph of $g(x) = -\sqrt{x}$ is the graph of $f(x)$ in which its $y$-coordinate is multiplied by $-1$. Notice the graph of $g(x)$, Figure \ref{fig:reflect_x} , is actually $y=f(x)$ reflected about $x$-axis.
+\begin{figure}[ht]
+\begin{center}
+    \begin{tikzpicture}[scale=1.2]
+\tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-1, xmax=7, ymin=-6, ymax=6]
+	\addplot[{->},domain=0:5, samples=100,smooth,ultra thick, black] {sqrt(x)};
+	\addplot[{->},domain=0:5,samples=100, smooth, ultra thick, red] {-1*sqrt(x)};
+	%%%%%%
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(4,2)};
+    \node [below left] at (0,0) {$0$};
+    \node [above] at (1,1) {$(1,1)$};
+    \node [above left] at (4,2) {$(4,2)$};
+    %%%
+    \addplot[mark=square*, red] coordinates {(1,-1)};
+    \addplot[mark=square*, red] coordinates {(4,-2)};
+    \node [below,red] at (1,-1) {$(1,-1)$};
+    \node [below left,red] at (4,-2) {$(4,-2)$};
+    %%% arrows
+    %\draw[myarrows] (0,0) -- (0,3);
+    %%% f(x) and g(x)
+    \node [right] at (5, 3.3) {$\bm{f(x)}$};
+    \node [right,red] at (5, -3.3) {$\bm{g(x)}$};
+
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{The graph of $f(x)=\sqrt{x}$ and $g(x)=-\sqrt{x}$.}
+\label{fig:reflect_x}
+\end{figure}
+\begin{tcolorbox}[title=Reflection about $\bm{x}$-axis,fonttitle=\bfseries,
+colframe=blue!75!black,colback=blue!10!white]
+%
+Let $f$ be a function:\\
+The graph of $y=-f(x)$ is the graph of $y=f(x)$ reflected about $x$-axis by multiplying the $y$-coordinates of the points on the graph of f by $−1$.
+%
+\end{tcolorbox}
+% ======= SECTION
+\section{Reflection about \texorpdfstring{$\bm{y}$}{TEXT}-axis}
+Here I will also consider $f(x)=\sqrt{x}$. To graph $h(x)=\sqrt{-x}$, since the $-1$ is grouped with $x$, we need to divide all $x$-coordinate by $-1$. Notice the graph of $h(x)$, Figure \ref{fig:reflect_y}, is actually $y=f(x)$ reflected about $y$-axis.
+\begin{figure}[ht]
+\begin{center}
+    \begin{tikzpicture}[scale=1]
+\tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-7, xmax=7, ymin=-1, ymax=5]
+	\addplot[->,domain=0:6, samples=100,smooth,ultra thick, black] {sqrt(x)};
+	\addplot[<-,domain=-6:0,samples=100, smooth, ultra thick, red] {sqrt(-1*x)};
+	%%%%%%
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,1)};
+    \addplot[mark=*] coordinates {(4,2)};
+    \node [below left] at (0,0) {$0$};
+    \node [below right] at (1,1) {$(1,1)$};
+    \node [below right] at (4,2) {$(4,2)$};
+    %%%
+    \addplot[mark=square*, red] coordinates {(-1,1)};
+    \addplot[mark=square*, red] coordinates {(-4,2)};
+    \node [below left,red] at (-1,1) {$(-1,1)$};
+    \node [below left,red] at (-4,2) {$(-4,2)$};
+    %%% arrows
+    %\draw[myarrows] (0,0) -- (0,3);
+    %%% f(x) and g(x)
+    \node [right] at (5, 3.3) {$\bm{f(x)}$};
+    \node [right,red] at (-6.5, 3.3) {$\bm{h(x)}$};
+
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{The graph of $f(x)=\sqrt{x}$ and $h(x)=\sqrt{-x}$}
+\label{fig:reflect_y}
+\end{figure}
+%
+\begin{tcolorbox}[title=Reflection about $\bm{y}$-axis,fonttitle=\bfseries,
+colframe=blue!75!black,colback=blue!10!white]
+%
+Let $f$ be a function:\\
+The graph of $y=f(-x)$ is the graph of $y=f(x)$ reflected about $y$-axis by multiplying the $x$-coordinates of the points on the graph of f by $−1$.
+%
+\end{tcolorbox}
+
+% ========= SECTION
+\section{Order of transformations}
+A function involving more than one transformation can be graphed by performing transformations in the following order:
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+    \item Horizontal shifting
+    \item Stretching or shrinking
+    \item Reflecting
+    \item Vertical shifting
+\end{enumerate}
+In other words, we start from inside of function, numbers that are affecting our $x$-coordinates and we gradually go outside, numbers that are affecting our $y$-coordinates.
+%%%
+\begin{tcolorbox}[title=Order of transformations,fonttitle=\bfseries,
+colframe=blue!75!black,colback=blue!10!white]
+%
+Let $f$ be a function. If $A \ne 0$ and $B \ne 0$, then to graph
+\begin{equation*}
+                g(x) = Af(Bx+H)+K
+\end{equation*} 
+\begin{enumerate}[1.]
+    \item If $H>0$ then Subtract $H$ from each of the $x$-coordinates of the points on the graph of $f$. However, if $H<0$ then Add $H$ to $x$-coordinates of $f$.\textit{ This results in a horizontal shift to the left for $H > 0$ or right for $H < 0$.}
+    \item Divide the $x$-coordinates of the points on the graph, obtained in Step 1, by $B$. \textit{This results in a horizontal stretching or shrinking, but may also include a reflection about the $y$-axis if $B < 0$.}
+    \item Multiply the $y$-coordinates of the points on the graph, obtained in Step 2, by $A$. \textit{This results in a vertical stretching or shrinking, but may also include a reflection about the $x$-axis if $A < 0$.}
+    \item Add $K$ to each of the $y$-coordinates of the points on the graph obtained in Step 3 if $k>0$. Otherwise, if $K<0$, subtract it from each of the $y$-coordinates of $f$. \textit{This results in a vertical shift up for $K > 0$ or down for $K < 0$.}
+\end{enumerate}
+%
+\end{tcolorbox}
+% ===== EXAMPLE 
+\begin{exa}
+    Use the graph of $y=f(x)$ given in Figure \ref{fig:example} to graph $y=-2f(x-2)-1$.
+\end{exa}
+%
+\begin{figure}[ht]
+\begin{center}
+    \begin{tikzpicture}[scale=1.2]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5]
+    \draw[ultra thick] (-2,0) -- (-1,1);
+    \draw[ultra thick] (-1,1) -- (0,0);
+    \draw[ultra thick] (0,0) -- (1,-1);
+    \draw[ultra thick] (1,-1) -- (2,0);
+
+	%%%%%%
+    \addplot[mark=*] coordinates {(-2,0)};
+    \addplot[mark=*] coordinates {(-1,1)};
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,-1)};
+    \addplot[mark=*] coordinates {(2,0)};
+%
+    \node [below left] at (0,0) {$(0,0)$};
+    \node [above right] at (2,0) {$(2,0)$};
+    \node [below ] at (1,-1) {$(1,-1)$};
+    \node [below left] at (-2,0) {$(-2,0)$};
+    \node [above] at (-1,1) {$(-1,1)$};
+%
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{The graph of $y=f(x)$}
+\label{fig:example}
+\end{figure}
+
+
+We first begin from inside. Number $-2$ grouped with $x$ is telling us that we need to shift the graph of $f$ 2 units to the right. This gives us
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5]
+    \draw[ultra thick] (-2,0) -- (-1,1);
+    \draw[ultra thick] (-1,1) -- (0,0);
+    \draw[ultra thick] (0,0) -- (1,-1);
+    \draw[ultra thick] (1,-1) -- (2,0);
+
+	%%%%%%
+    \addplot[mark=*] coordinates {(-2,0)};
+    \addplot[mark=*] coordinates {(-1,1)};
+    \addplot[mark=*] coordinates {(0,0)};
+    \addplot[mark=*] coordinates {(1,-1)};
+    \addplot[mark=*] coordinates {(2,0)};
+%
+    \node [below left] at (0,0) {$(0,0)$};
+    \node [above right] at (2,0) {$(2,0)$};
+    \node [below ] at (1,-1) {$(1,-1)$};
+    \node [below left] at (-2,0) {$(-2,0)$};
+    \node [above] at (-1,1) {$(-1,1)$};
+%
+    \end{axis}
+\end{tikzpicture}
+%
+\quad
+% ARROW
+\begin{tikzpicture}[scale=0.3]
+    \tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+    \draw[myarrows] (-1,0) -- (2,0);
+\end{tikzpicture}
+% END ARROW
+    \begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5]
+    % NEW
+    \draw[ultra thick,red] (0,0) -- (1,1);
+    \draw[ultra thick,red] (1,1) -- (2,0);
+    \draw[ultra thick,red] (2,0) -- (3,-1);
+    \draw[ultra thick,red] (3,-1) -- (4,0);
+	%%%%%%
+    \addplot[mark=*,red] coordinates {(0,0)};
+    \addplot[mark=*,red] coordinates {(1,1)};
+    \addplot[mark=*,red] coordinates {(2,0)};
+    \addplot[mark=*,red] coordinates {(3,-1)};
+    \addplot[mark=*,red] coordinates {(4,0)};
+%
+    \node [below left] at (0,0) {$(0,0)$};
+    \node [above right] at (1,1) {$(1,1)$};
+    \node [below left] at (2,0) {$(2,0)$};
+    \node [below ] at (3,-1) {$(3,-1)$};
+    \node [above left] at (4,0) {$(4,0)$};
+%
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+Then we need to multiply $y$-coordinate by 2 (horizontal stretching). 
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5]
+    % NEW
+    \draw[ultra thick,red] (0,0) -- (1,1);
+    \draw[ultra thick,red] (1,1) -- (2,0);
+    \draw[ultra thick,red] (2,0) -- (3,-1);
+    \draw[ultra thick,red] (3,-1) -- (4,0);
+	%%%%%%
+    \addplot[mark=*,red] coordinates {(0,0)};
+    \addplot[mark=*,red] coordinates {(1,1)};
+    \addplot[mark=*,red] coordinates {(2,0)};
+    \addplot[mark=*,red] coordinates {(3,-1)};
+    \addplot[mark=*,red] coordinates {(4,0)};
+%
+    \node [below left] at (0,0) {$(0,0)$};
+    \node [above right] at (1,1) {$(1,1)$};
+    \node [below left] at (2,0) {$(2,0)$};
+    \node [below ] at (3,-1) {$(3,-1)$};
+    \node [above left] at (4,0) {$(4,0)$};
+%
+    \end{axis}
+\end{tikzpicture}
+%
+\quad
+% ARROW
+\begin{tikzpicture}[scale=0.3]
+    \tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+    \draw[myarrows] (-1,0) -- (2,0);
+\end{tikzpicture}
+% END ARROW
+    \begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5]
+    % NEW
+    \draw[ultra thick,blue] (0,0) -- (1,2);
+    \draw[ultra thick,blue] (1,2) -- (2,0);
+    \draw[ultra thick,blue] (2,0) -- (3,-2);
+    \draw[ultra thick,blue] (3,-2) -- (4,0);
+	%%%%%%
+    \addplot[mark=*,blue] coordinates {(0,0)};
+    \addplot[mark=*,blue] coordinates {(1,2)};
+    \addplot[mark=*,blue] coordinates {(2,0)};
+    \addplot[mark=*,blue] coordinates {(3,-2)};
+    \addplot[mark=*,blue] coordinates {(4,0)};
+%
+    \node [below left] at (0,0) {$(0,0)$};
+    \node [above right] at (1,2) {$(1,2)$};
+    \node [below left] at (2,0) {$(2,0)$};
+    \node [below ] at (3,-2) {$(3,-2)$};
+    \node [above left] at (4,0) {$(4,0)$};
+%
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+Next, we should reflect the graph about $y$-axis; meaning to multiply its $y$-coordinate by $-1$.
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5]
+    % NEW
+    \draw[ultra thick,blue] (0,0) -- (1,2);
+    \draw[ultra thick,blue] (1,2) -- (2,0);
+    \draw[ultra thick,blue] (2,0) -- (3,-2);
+    \draw[ultra thick,blue] (3,-2) -- (4,0);
+	%%%%%%
+    \addplot[mark=*,blue] coordinates {(0,0)};
+    \addplot[mark=*,blue] coordinates {(1,2)};
+    \addplot[mark=*,blue] coordinates {(2,0)};
+    \addplot[mark=*,blue] coordinates {(3,-2)};
+    \addplot[mark=*,blue] coordinates {(4,0)};
+%
+    \node [below left] at (0,0) {$(0,0)$};
+    \node [above right] at (1,2) {$(1,2)$};
+    \node [below left] at (2,0) {$(2,0)$};
+    \node [below ] at (3,-2) {$(3,-2)$};
+    \node [above left] at (4,0) {$(4,0)$};
+%
+    \end{axis}
+\end{tikzpicture}
+%
+\quad
+% ARROW
+\begin{tikzpicture}[scale=0.3]
+    \tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+    \draw[myarrows] (-1,0) -- (2,0);
+\end{tikzpicture}
+% END ARROW
+    \begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5]
+    % NEW
+    \draw[ultra thick,blue] (0,0) -- (1,-2);
+    \draw[ultra thick,blue] (1,-2) -- (2,0);
+    \draw[ultra thick,blue] (2,0) -- (3,2);
+    \draw[ultra thick,blue] (3,2) -- (4,0);
+	%%%%%%
+    \addplot[mark=*,blue] coordinates {(0,0)};
+    \addplot[mark=*,blue] coordinates {(1,-2)};
+    \addplot[mark=*,blue] coordinates {(2,0)};
+    \addplot[mark=*,blue] coordinates {(3,2)};
+    \addplot[mark=*,blue] coordinates {(4,0)};
+%
+    \node [below left] at (0,0) {$(0,0)$};
+    \node [below right] at (1,-2) {$(1,-2)$};
+    \node [above left] at (2,0) {$(2,0)$};
+    \node [above ] at (3,2) {$(3,2)$};
+    \node [below left] at (4,0) {$(4,0)$};
+%
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+Finally, we shift the graph 1 unit vertically downward.
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5]
+    % NEW
+    \draw[ultra thick,blue] (0,0) -- (1,-2);
+    \draw[ultra thick,blue] (1,-2) -- (2,0);
+    \draw[ultra thick,blue] (2,0) -- (3,2);
+    \draw[ultra thick,blue] (3,2) -- (4,0);
+	%%%%%%
+    \addplot[mark=*,blue] coordinates {(0,0)};
+    \addplot[mark=*,blue] coordinates {(1,-2)};
+    \addplot[mark=*,blue] coordinates {(2,0)};
+    \addplot[mark=*,blue] coordinates {(3,2)};
+    \addplot[mark=*,blue] coordinates {(4,0)};
+%
+    \node [below left] at (0,0) {$(0,0)$};
+    \node [below right] at (1,-2) {$(1,-2)$};
+    \node [above left] at (2,0) {$(2,0)$};
+    \node [above ] at (3,2) {$(3,2)$};
+    \node [below left] at (4,0) {$(4,0)$};
+%
+    \end{axis}
+\end{tikzpicture}
+%
+\quad
+% ARROW
+\begin{tikzpicture}[scale=0.3]
+    \tikzstyle{myarrows}=[line width=0.7mm,draw=blue,-triangle 45,postaction={draw, line width=1.5mm, shorten >=2.5mm, -}]
+    \draw[myarrows] (-1,0) -- (2,0);
+\end{tikzpicture}
+% END ARROW
+    \begin{tikzpicture}[scale=0.8]
+	\begin{axis}[my style,
+    ticks=none,
+	xmin=-5, xmax=5, ymin=-5, ymax=5]
+    % NEW
+    \draw[ultra thick,green] (0,-1) -- (1,-3);
+    \draw[ultra thick,green] (1,-3) -- (2,-1);
+    \draw[ultra thick,green] (2,-1) -- (3,1);
+    \draw[ultra thick,green] (3,1) -- (4,-1);
+	%%%%%%
+    \addplot[mark=*,green] coordinates {(0,-1)};
+    \addplot[mark=*,green] coordinates {(1,-3)};
+    \addplot[mark=*,green] coordinates {(2,-1)};
+    \addplot[mark=*,green] coordinates {(3,1)};
+    \addplot[mark=*,green] coordinates {(4,-1)};
+%
+    \node [below left] at (0,-1) {$(0,-1)$};
+    \node [below right] at (1,-3) {$(1,-3)$};
+    \node [above left] at (2,-1) {$(2,-1)$};
+    \node [above ] at (3,1) {$(3,1)$};
+    \node [below left] at (4,-1) {$(4,-1)$};
+%
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+The green graph is our solution.
+% ======= SUMMARY of RULEs
+\section{Summary of All Rules}
+Table \ref{tab:tranform} shows the summary of all transformations:
+\renewcommand{\arraystretch}{2}
+\begin{table}[ht]
+  \begin{threeparttable}
+    \centering
+    \caption{Summary of Transformations}
+    \label{tab:tranform}
+    \begin{tabular}{|c||c||c|}
+    \Xhline{2\arrayrulewidth}
+   New function  & Transformation of points & Visual effect \\ \hline
+    $f(x)+d$ &  $(a,b) \mapsto (a,b\textcolor{red}{+d})$ &  shift up by $d$ \\
+    \hline
+     $f(x)-d$ &  $(a,b) \mapsto (a,b\textcolor{red}{-d})$ &  shift down by $d$ \\
+    \hline    
+    $f(x+h)$ &  $(a,b) \mapsto (a\textcolor{red}{-h},b)$ &  shift left by $h$ \\
+    \hline  
+    $f(x-h)$ &  $(a,b) \mapsto (a\textcolor{red}{+h},b)$ &  shift right by $h$ \\
+    \hline\hline
+    $cf(x)$ & $(a,b) \mapsto (a,\textcolor{red}{c}b)$ & stretch vertically by $c$ \\
+    \hline 
+    ${\textstyle \frac{1}{c}}f(x)$ & $(a,b) \mapsto (a,\textcolor{red}{{\textstyle \frac{1}{c}}}b)$ & shrink vertically by $\textstyle \frac{1}{c}$ \\
+    \hline 
+    $f(kx)$ & $(a,b) \mapsto (\textcolor{red}{{\textstyle \frac{1}{k}}}a,b)$ & shrink horizontally by $\textstyle \frac{1}{k}$ \\
+    \hline 
+    $f({\textstyle \frac{1}{k}}x)$ & $(a,b) \mapsto (\textcolor{red}{k}a,b)$ & stretch horizontally by $k$ \\
+    \hline\hline
+    $-f(x)$ & $(a,b) \mapsto (a, \textcolor{red}{-}b)$ & reflect about $x$-axis \\
+    \hline
+    $f(-x)$ & $(a,b) \mapsto (\textcolor{red}{-}a, b)$ & reflect about $y$-axis \\
+    \Xhline{2\arrayrulewidth}
+    \end{tabular}
+    \begin{tablenotes}
+      \small
+      \item[\dag] $d$, $h$, $c$ and $k$ are all real positive numbers.
+      \item[\dag \dag] $c$ and $k$ are greater than 1.
+    \end{tablenotes}
+    \end{threeparttable}
+
+\end{table}

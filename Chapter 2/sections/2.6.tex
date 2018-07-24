@@ -1,0 +1,331 @@
+\chapter{Combination of Functions}
+%\addcontentsline{toc}{chapter}{1 Graphs}
+%%%%%%%%%%%%%%% SECTION HEADER %%%%%%%%%%%%%%%%
+\rhead{6}
+\lhead{Combination of Functions}
+%%%%%%%%%%%%%%%%%%% START %%%$%%%%%%%%%%%%%%%%%
+\section{Domains of a function}
+The domain of a function is the set of all real numbers you can substitute into the function; In other words, all $x$-values.\\
+Consider the standard quadratic function, $f(x) = x^2$. As you can see, we can substitute any real number we want into this function; We can use $x=3$ or $-10$ or $10000$ or $3.14159$ or whatever and we still get an answer. So because there is no restriction on $x$, the domain is all real numbers. We can express it both in set-builder and interval notation as follows:
+\begin{align*}
+        \text{Set-builder: Domain} &: \{x \mid x\ \in \mathbb{R}\ \}\\
+        \text{Interval: Domain} &: (-\infty,\, +\infty)
+\end{align*}
+Now let's consider $f(x)=\frac{1}{x-6}$. It looks like any number will work. But wait! What happens if we use $x=6$? The denominator becomes zero and we divide by zero, which is not allowed. Since any other number is fine, the domain of this function is all real number except $6$.  Therefore,
+\begin{align*}
+        \text{Set-builder: Domain} &= \{x \mid x\neq 6\ \}\\
+        \text{Interval: Domain} &= (-\infty,\,6) \cup (6,\,+\infty)
+\end{align*}
+As you can see, there are some situation that impose a restriction on our domain. When determining the domain of a function, we really only have to look out for four situations:
+\begin{enumerate}[label=\protect\circled{\arabic*}]
+    \item \textbf{Rational Expressions}: Division by zero is not allowed. So we must omit any values of $x$ which make the denominator 0; In other words, the domain will be all real number except roots of denominator.
+            \begin{equation*}
+               f(x) =\frac{u}{v}\quad \longrightarrow \quad 
+               \text{Domain}: \{x \mid v\neq 0\ \}\\
+        \end{equation*}
+    \item \textbf{Even roots}: For even roots such as square roots, the radicand can not be negative. Thus, to find the domain find all $x$ that makes the radicand non-negative: 
+        \begin{equation*}
+                f(x) =\sqrt{u} \quad \longrightarrow \quad 
+               \text{Domain}: \{x \mid u \ge 0\ \}\\
+        \end{equation*}
+    \item \textbf{Even roots in the denominator}: In this case, since we have a even root, the radicand should be non-negative. However, it cannot be zero because it is located in denominator. Therefore, to find domain:
+            \begin{equation*}
+                f(x) =\frac{u}{\sqrt{v}} \quad \longrightarrow \quad 
+               \text{Domain}: \{x \mid v > 0\ \}\\
+        \end{equation*}
+    \item \textbf{Logarithmic function}: In chapter 4, we'll see that logarithms can only be take of positive values.
+\end{enumerate}
+% ======= EXAMPLE 1
+\begin{exa}
+    Find the domain of each functions.
+    \begin{enumerate}[\bfseries a.]
+        \begin{multicols}{2}
+        \item $f(x) = \frac{5x}{x^2-49}$
+        \item $g(x) =x^2-4x+2$
+        \item $ h(x) = \sqrt{9x-27}$
+        \item $k(x)=\frac{5x}{\sqrt{24-3x}}$
+        \end{multicols}
+    \end{enumerate}
+\end{exa}
+\textbf{a.} We have a rational expression, so we must exclude roots of denominators. 
+\begin{align*}
+        x^2-49=0&   &   &\text{Set the denominator to 0, add 49}\\
+        x^2=49& &   &\text{Take square root, don't forget $\pm$}\\
+        x = \pm \sqrt{49}&  &   &\text{49 is a perfect square}\\
+        x = \pm 7&  &   &\text{These roots are excluded}
+\end{align*}
+So the domain is all real numbers except $-7$ and $7$ so domain is \[(-\infty,-7) \cup (-7,7) \cup (7,+\infty)\]
+\\
+\textbf{b.} Since we don't have any type of restrictions, the domain is all real numbers or $(-\infty, +\infty)$.
+\\[1cm]
+\textbf{c.} The radicand of square roots should be non-negative, so
+\begin{align*}
+        9x - 27 \ge 0 &     &   &\text{Add 27}\\
+        9x \ge 27&  &   &\text{Divide both sides by 9}\\
+        x \ge 3&    &   &\text{Our domain}
+\end{align*}
+The domain is $x\ge 3$ or in interval notation $[3,+\infty)$.
+\\[1cm]
+\textbf{d. } The radicand should be non-negative but cannot be zero so
+\begin{align*}
+        24-3x > 0&  &   &   \text{Subtract 24}\\
+        -3x > -24&  &   &\text{Divide both sides by $-3$, flip the sign!}\\
+        x < 8&  &   &\text{Our domain}
+\end{align*}
+Thus, domain is $x < 8$ or using interval notation $(-\infty,8)$.
+% ========= END Example
+\section{The algebra of functions}
+We can combine the functions using addition, subtraction, multiplication and division.
+\begin{tcolorbox}[
+                    title=Algebra of functions, fonttitle=\bfseries,
+                    colframe=blue!70!red,
+                    colback=white]
+Let $f$ and $g$ be two functions:
+\begin{align*}
+    &\textbf{1. Sum:} &     &(f+g)(x) = f(x)+g(x)\\
+    &\textbf{2. Difference:} &  &(f-g)(x)= f(x) - g(x)\\
+    &\textbf{3. Product:} & &(fg)(x) = f(x)\cdot g(x)\\
+    &\textbf{4. Quotient:} &    &\biggl(\frac{f}{g} \biggr)(x)= \frac{f(x)}{g(x)}
+\end{align*}
+\end{tcolorbox}
+% ========= EXAMPLE 
+\begin{exa}
+    Let $f(x) =x-5$ and $g(x) = x^2-1$. Find each of the following functions:
+    \begin{enumerate}[\bfseries a.]
+    \begin{multicols}{2}
+        \item $(f+g)(x)$
+        \item $(f-g)(x)$
+        \item $(fg)(x)$
+        \item $\biggl(\frac{f}{g} \biggr)(x)$
+    \end{multicols}
+    \end{enumerate}
+\end{exa}
+%%
+\vspace{0.5cm}
+%%
+\textbf{a. }
+$(f+g)(x)$ is $f(x)+g(x)$ so,
+\begin{align*}
+    f(x)+g(x)&   &   &\text{Substitute}\\
+    (x-5) + (x^2-1)&    &   &\text{Combine like terms}\\
+    x+x^2-6&    &   &\text{Our solution}
+\end{align*}
+\\[0.2cm]
+%%
+\textbf{b. }
+$(f+g)(x)$ is $f(x)-g(x)$ so,
+\begin{align*}
+    f(x)-g(x)&   &   &\text{Substitute}\\
+    (x-5) - (x^2-1)&    &   &\text{Distribute $-1$}\\
+    x-5-x^2+1&    &   &\text{Combine like terms}\\
+    x-x^2-4&    &   &\text{Our solution}
+\end{align*}
+\\[0.2cm]
+%%
+\textbf{c. }
+$(fg)(x)$ is $f(x)\cdot g(x)$ so,
+\begin{align*}
+    f(x)\cdot g(x)&   &   &\text{Substitute}\\
+    (x-5)\cdot (x^2-1)&    &   &\text{FOIL method}\\
+    x^3-x-5x^2+5&    &   &\text{Our solution}
+\end{align*}
+\\[0.2cm]
+%%
+\textbf{d. }
+$\biggl(\frac{f}{g} \biggr)(x)$ is $\frac{f(x)}{g(x)}$ so,
+\begin{align*}
+    \frac{f(x)}{g(x)}&   &   &\text{Substitute}\\
+    \frac{x-5}{x^2-1}&    &   &\text{Our solution}
+\end{align*}
+% ===========
+\subsection{Domain of combining functions}
+Domain of  each of these functions consists of all real numbers that are common to domains of $f$ and $g$. If $D_f$ represent domain of $f$ and $D_g$ represent domain of $g$, therefore the domain for each function is $D_f \cap D_g$. For the quotient case, we have to add the condition that denominator cannot be zero.
+\begin{tcolorbox}[
+                    title=Domain of combining functions, fonttitle=\bfseries,
+                    colframe=blue!70!red,
+                    colback=white]
+Let $f$ and $g$ be two functions:
+\begin{align*}
+    &\textbf{1. Sum:} &     &\text{Domain: } D_f \cap D_g\\
+    &\textbf{2. Difference:} &  &\text{Domain: } D_f \cap D_g\\
+    &\textbf{3. Product:} & &\text{Domain: } D_f \cap D_g\\
+    &\textbf{4. Quotient:} &    &\text{Domain: } D_f \cap D_g\quad  \text{and} \quad g(x)\neq 0\\
+\end{align*}
+\end{tcolorbox}
+% ====== EXAMPLE 
+\begin{exa}
+    If $f(x)=5x+1$ and $g(x)=x^2-3x-4$, determine the domain of each of the following functions:
+        \begin{enumerate}[\bfseries a.]
+    \begin{multicols}{2}
+        \item $(f+g)(x)$
+        \item $(f-g)(x)$
+        \item $(fg)(x)$
+        \item $\biggl(\frac{f}{g} \biggr)(x)$
+    \end{multicols}
+    \end{enumerate}
+\end{exa}
+Since the equations for $f$ and $g$ do not involve division or contain even roots, the domain of both of them is the set of all real numbers. Therefore, the domain of $f+g$, $f-g$, and $fg$ is the set of all real numbers or $(-\infty,\,+\infty)$.\\
+The function $\frac{f}{g}$ contains division. We must exclude the roots of denominator, $x^2-3x-4$. Let's find them
+\begin{align*}
+    x^2-3x-4=0&     &       &\text{Factor out}\\
+    (x+1)(x-4)=0&   &       &\text{Set each factor equal to 0}\\
+    x=-1\quad x=4&  &       &\text{roots of denominators}
+\end{align*}
+We must exclude $-1$ and $4$ from the domain of $\frac{f}{g}$. 
+\begin{equation*}
+    \text{Domain of }\frac{f}{g} = (\infty,-1) \cup (-1,4) \cup (4,+\infty)
+\end{equation*}
+% ========= SECTION
+\section{Composite functions}
+Another way to combine two functions is composition. A composition
+of functions is a function inside of a function. The notation used for composition of functions is:
+\begin{equation}
+        (f\circ g)(x) = f(g(x))
+\end{equation}
+To find a composite function, we will take the inside function and substitute into the outside function.
+% ===== EXAMPLE
+\begin{exa}
+    If $f(x) =x^2-3$ and $g(x) = x+2$, find each composite function:
+    \begin{enumerate}[\bfseries a.]
+        \item $(f \circ g)(x)$
+        \item $(g \circ f)(x)$
+    \end{enumerate}
+\end{exa}
+%
+\vspace{0.2cm}
+a. $(f \circ g)(x)$ means $f(g(x))$:
+\begin{align*}
+        f(\textcolor{red}{g(x)})&   &   &\text{Substitute $g(x)$ into $f(x)$}\\
+        (\textcolor{red}{g(x)})^2-3&    &   &\text{$g(x)$ is $x+2$}\\
+        (\textcolor{red}{x+2})^2-3& &   &\text{Simplify}\\
+        x^2+2^2+2(x)(2) -3& &   &\text{Combine like terms, $4$ and $-3$}\\
+        x^2+4x+1&   &   &\text{Our solution}
+\end{align*}
+%
+\\[0.5cm]
+%
+b. $(g \circ f)(x)$ means $g(f(x))$:
+\begin{align*}
+        g(\textcolor{red}{f(x)})&   &   &\text{Substitute $f(x)$ into $g(x)$}\\
+        \textcolor{red}{f(x)}+2&    &   &\text{$f(x)$ is $x^2-3$}\\
+        \textcolor{red}{x^2-3}+2& &   &\text{Combine like terms}\\
+        x^2-1& &   &\text{Our solution}
+\end{align*}
+% ======= NOTE 1
+\begin{nt}
+    It is important to note that very rarely is $(f \circ g)(x)$ the same as $(g \circ f)(x)$ as the previous example showed.
+\end{nt}
+% ======== NOTE 2
+\begin{nt}
+    To calculate a composition of function we will evaluate the inner function and
+substitute the answer into the outer function. This is shown in the following
+example.
+\end{nt}
+% ======== EXAMPLE 
+\begin{exa}
+    If $f(x) =x^2-2x+1$ and $g(x) = x-5$, evaluate each composite function:
+    \begin{enumerate}[\bfseries a.]
+        \item $(f \circ g)(3)$
+        \item $(g \circ f)(-1)$
+    \end{enumerate}
+\end{exa}
+%
+\vspace{0.2cm}
+a. $(f \circ g)(3)$ is actually $f(g(3))$. Evaluate the inner function first, $g(3)$:
+\begin{align*}
+        g(x) &= x-5  &   &\text{This is $g(x)$}\\
+        g(3) &= 3-5  &   &\text{Subtract}\\
+             &= -2   &   &\text{This is $g(3)$}
+\end{align*}
+Now $-2$ goes into $f$,
+\begin{align*}
+    f(-2) &= (-2)^2-2(-2)+1     &       &\text{Simplify}\\
+          &= 4+4+1              &       &\text{Add}\\
+          &= 9                  &       &\text{Our solution}
+\end{align*}
+%
+\\[0.2cm]
+%
+b.  $(g \circ f)(-1)$ is actually $g(f(-1))$. Evaluate the inner function first, $f(-1)$:
+\begin{align*}
+        f(x)  &= x^2-2x+1  &   &\text{This is $f(x)$}\\
+        f(-1) &= (-1)^2-2(-1)+1  &   &\text{Simplify and add}\\
+              &= 4   &   &\text{This is $f(-1)$}
+\end{align*}
+Now $4$ goes into $g$,
+\begin{align*}
+    g(4) &= 4-5      &       &\text{Simplify}\\
+         &= -1       &       &\text{Our solution}\\
+\end{align*}
+% ========== SUB
+\subsection{Domain of a composite function}
+Finding the domain of a composite function consists of two steps: 
+\begin{enumerate}[\bfseries 1.]
+    \item Find the domain of the "inside" (input) function. If there are any restrictions on the domain, keep them. 
+    \item Construct the composite function. Find the domain of this new function. If there are restrictions on this domain, add them to the restrictions from Step 1. 
+\end{enumerate}
+% ====== EXAMPLE
+\begin{exa}
+    Given $f(x)= x^2+2$ and $g(x)=\sqrt{7-x}$, find each of the following:
+    \begin{enumerate}[\bfseries a.]
+    \begin{multicols}{2}
+        \item $(f \circ g)(x)$
+        \item Domain of $(f \circ g)(x)$
+    \end{multicols}
+    \end{enumerate}
+\end{exa}
+%
+\vspace{0.2cm}
+%
+a. $(f \circ g)(x)$ is $f(g(x))$ so
+\begin{align*}
+    f(\textcolor{red}{g(x)})&    &   &\text{$g(x)$ goes into $f(x)$}\\
+    (\textcolor{red}{g(x)})^2+2& &   &\text{Replace $g(x)$ with $\sqrt{7-x}$}\\
+    (\textcolor{red}{\sqrt{7-x}})^2+2&   &   &\text{Simplify}\\
+    7-x +2 &    &   &\text{Combine like terms}\\
+    9-x&    &   &\text{Our solution}
+\end{align*}
+%
+\\[0.2cm]
+%
+b. Domain of $(f \circ g)(x)$:
+\begin{enumerate}[1.]
+    \item We must find domain of inside, $g(x)$. Since $g(x)$ contains even roots, therefore
+            \begin{align*}
+                7-x \ge 0&  &   &\text{Solve for $x$}\\
+                x \le 7&    &   &\text{Keep this!}
+            \end{align*}
+    \item In next step, we must look at the composite function itself. Since $(f \circ g)(x) = 9-x$, This function puts no additional restrictions on the domain. So the composite domain is $x \le 7$.
+\end{enumerate}
+%
+% ======== EXAMPLE 
+\begin{exa}
+    Given $f(x) = \frac{3x}{x-1}$ and $g(x) = \frac{2}{x}$, find each of the following:
+    \begin{enumerate}[\bfseries a.]
+    \begin{multicols}{2}
+        \item $(f \circ g)(x)$
+        \item Domain of $(f \circ g)(x)$
+    \end{multicols}
+    \end{enumerate}
+\end{exa}
+%
+\vspace{0.2cm}
+%
+a. $(f \circ g)(x)$ is $f(g(x))$ so
+\begin{align*}
+    f(\textcolor{red}{g(x)})&    &   &\text{$g(x)$ goes into $f(x)$}\\
+    \frac{3\,\textcolor{red}{g(x)}}{\textcolor{red}{g(x)}-1}& &   &\text{Replace $g(x)$ with $\frac{2}{x}$}\\
+    %
+    \frac{3\textcolor{red}{(\frac{2}{x})}}{\textcolor{red}{(\frac{2}{x})}-1}&   &   &\text{Simplify by multiply by $\frac{x}{x}$}\\
+    \frac{(\frac{6}{x})}{(\frac{2}{x})-1}\cdot \bm{\frac{x}{x}}&    &   &\text{Multiply}\\
+    \frac{6}{2-x}&    &   &\text{Our solution}
+\end{align*}
+%
+\\[0.2cm]
+%
+b. To find domain of $(f \circ g)(x)$, follow these steps:
+\begin{enumerate}[1.]
+    \item We must find domain of inside, $g(x)$. Since $g(x)$ contains division, therefore $x\ne 0$. Keep this!
+    \item We must find the domain of $(f \circ g)(x) = \frac{6}{2-x}$. Since this function also contains division, $2-x\neq 0$, gives us $x\neq 2$.
+\end{enumerate}
+Combine this domain with the domain from Step 1: the composite domain is $\{x \mid x\neq 0 \text{ and } x\neq 2\}$ or in interval notation $(-\infty,0) \cup (0,2) \cup (2,+\infty)$.
