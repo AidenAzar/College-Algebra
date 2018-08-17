@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               PREAMBLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,a4paper]{report}
+\input{preamble}
+\input{header_footer}
+\input{macros}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                            BEGIN HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+% COVER TITLE
+\input{cover/cover_title}
+% TABLE OF CONTENT
+\pagestyle{empty}
+\tableofcontents
+\clearpage
+\pagestyle{fancy}
+% SECTIONS
+\include{sections/3.1}
+\include{sections/3.5}
+\include{sections/3.6}
+\include{ref}
+\end{document}
