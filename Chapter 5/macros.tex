@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 			Picture with arrows - mathrm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usetikzlibrary{arrows}
+
+% Define how TiKZ will draw the nodes
+\tikzset{mathterm/.style={draw=white,fill=white,rectangle,anchor=base}}
+\tikzstyle{every picture}+=[remember picture]
+\everymath{\displaystyle}
+
+\makeatletter
+
+% Designate a term in a math environment to point to
+% Syntax: \mathterm[node label]{some math}
+\newcommand\mathterm[2][]{%
+   \tikz [baseline] { \node [mathterm] (#1) {$#2$}; }}
+
+% A command to draw an arrow from the current position to a labelled math term
+% Default color=black, default arrow head=stealth
+% Syntax: \indicate[color]{term to point to}[path options]
+\newcommand\indicate[2][black]{%
+   \tikz [baseline] \node [inner sep=0pt,anchor=base] (i#2) {\vphantom|};
+   \@ifnextchar[{\@indicateopts{#1}{#2}}{\@indicatenoopts{#1}{#2}}}
+\def\@indicatenoopts#1#2{%
+   {\color{#1} \tikz[overlay] \path[line width=1pt,draw=#1,-stealth] (i#2) edge (#2);}}
+\def\@indicateopts#1#2[#3]{%
+   {\color{#1} \tikz[overlay] \path[line width=1pt,draw=#1,-stealth] (i#2) [#3] edge (#2);}}
+
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 						Circle around a text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+        \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 							x mark
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\xmark}{\text{\ding{55}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			To fiddle around with the width between rows
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\arraystretch}{1.2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          			 oval around a text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ovaled}[1]{%
+\tikz[baseline=(char.base)]\node[anchor=south west, draw,rectangle, rounded corners, inner sep=2pt, minimum size=7mm, text height=2mm](char){{#1}} ;}
+
+
+  
+
+
+
+
+
+
