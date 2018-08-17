@@ -1,0 +1,136 @@
+\chapter{Exponential Growth and Decay: Modeling Data}
+%%%%%%%%%%%%%%% SECTION HEADER %%%%%%%%%%%%%%%%
+\lhead{Exponential growth and decay: modeling data}
+\rhead{5}
+%%%%%%%%%%%%%%%%%%% START %%%$%%%%%%%%%%%%%%%%%
+There are many phenomena in the worlds that the amount of something whether grows or decay fast. For example, compounding money, bacteria growth in a petri dish and radioactive decay of an element.
+% ============
+\section{The exponential growth}
+An exponential growth process is one in which the rate of increase of a quantity is 
+proportional to the present value of that quantity. The simplest example is a savings 
+account.
+	\begin{tcolorbox}[title=The exponential growth, fonttitle=\bfseries,
+	                  colframe=blue!70!black,
+	                  colback=white]
+		The model for exponential growth is 
+		\begin{equation}
+				A=A_0e^{kt} \label{exp_growth}	
+		\end{equation}
+		where,
+		\begin{align*}
+			A_0&= \text{initial amount or size}\\
+			t &=  \text{time} \\
+			A &= \text{The amount at time $t$}\\
+			k &= \text{a constant.}
+		\end{align*}
+		In this model, $k>0$ and it is called the growth rate.
+	\end{tcolorbox}
+% =============== EXAMPLE 1
+\begin{exa}
+In 2000, the population of Africa was 807 million and by 2011 it had grown to 1052
+million. 
+	\begin{enumerate}[a.]
+	 \item Use the exponential growth model $A = A_0 e^{kt}$ , in which $t$ is the number of years after 2000, to find the exponential growth function that models the data.
+	 \item By which year will Africa’s population reach 2000 million, or two billion?
+	\end{enumerate}
+a. We are given 
+		\begin{align*}
+				A_0&=807 \quad \text{million}\\
+				t &=11 \quad \text{years}\\
+				A &= 1050 \quad \text{million}
+		\end{align*}
+and we are looking for $k$. Plug them into $A = A_0 e^{kt}$ and solve for $k$.
+		\begin{align*}
+			A &= A_0e^{kt} &&\text{Substitute $A$, $A_0$ and $t$}\\
+			1052 &= 807e^{k(11)} &&\text{Divide both sides by 807}\\
+			\frac{1052}{807} &= e^{k(11)} &&\text{Exponential equation, take ln}\\
+			\ln{\left(\frac{1052}{807}\right)} &= \ln{e^{k(11)}} &&\text{Apply power rule}\\
+			\ln{\left(\frac{1052}{807}\right)} &=k(11)\ln{e} &&\text{We know $\ln{e}=1$}\\
+			\ln{\left(\frac{1052}{807}\right)} &=k(11) &&\text{Divide both sides by 11}
+				\\
+			\frac{\ln{\left(\frac{1052}{807}\right)}}{11} &=k &&\text{Use calculator}\\
+			\frac{0.2651247}{11} &= k && \\
+			0.024 &\approx k && \text{Our solution}	
+		\end{align*}
+b. We have
+		\begin{align*}
+				A_0&=807 \quad \text{million}\\
+				A &= 2000 \quad \text{million}
+		\end{align*}
+and we are looking for $t$. Substitute and solve for it.
+		\begin{align*}
+			2000 &= 807e^{0.024t} &&\text{Divide both sides by 807}\\
+			\frac{2000}{807} &= e^{0.024t} &&\text{Exponential equation, take ln}\\
+			\ln{\left(\frac{2000}{807}\right)} &= \ln{e^{0.024t}} &&\text{Apply power rule}\\
+			\ln{\left(\frac{2000}{807}\right)} &=0.024t\ln{e} &&\text{We know $\ln{e}=1$}\\
+			\ln{\left(\frac{2000}{807}\right)} &=0.024t &&\text{Divide both sides by 0.024}\\
+			\frac{\ln{\left(\frac{2000}{807}\right)}}{0.024} &=t &&\text{Use calculator}\\
+			\frac{0.024102248}{0.024} &= t && \\
+			38 &\approx t && \text{Our solution}	
+		\end{align*}
+So after 38 years, in 2038, the population of Africa reach 2000 million.
+\end{exa}
+% ========== SECTION
+\section{The exponential decay}
+When a population decays exponentially, it decreases at a rate that is proportional to 
+its size at any time $t$.
+	\begin{tcolorbox}[title=The exponential decay, fonttitle=\bfseries,
+	                  colframe=blue!70!black,
+	                  colback=white]
+		The model for exponential decay is 
+		\begin{equation}
+				A=A_0e^{kt} \label{exp_decay}	
+		\end{equation}
+		where,
+		\begin{align*}
+			A_0&= \text{initial amount or size}\\
+			t &=  \text{time} \\
+			A &= \text{The amount at time $t$}\\
+			k &= \text{a constant.}
+		\end{align*}
+		In this model, $k<0$ and it is called the decay rate.
+	\end{tcolorbox}
+\begin{nt}
+Many times, the amount of a substance is expressed in terms of half-life, meaning
+	\[ 
+		A=A_0/2
+	\]
+the time it takes for half of any given quantity to decay so that only half of its 
+original amount remains. 
+\end{nt}
+% =========== Example 2
+\begin{exa}
+Strontium-90 is a waste product from nuclear reactors. As a consequence of fallout from 
+atmospheric nuclear tests, we all have a measurable amount of strontium-90 in our bones.
+	\begin{enumerate}[a.]
+		\item The half-life of strontium-90 is 28 years, meaning that after 28 years a given amount of the substance will have decayed to half the original amount. Find the exponential decay model for strontium-90. 
+		\item Suppose that a nuclear accident occurs and releases 60 grams of strontium-90 into the atmosphere. How long will it take for strontium-90 to decay to a level of 10 grams?
+	\end{enumerate}	
+\newpage
+a. We know the half-life of strontium-90 is 28 years. This means after 28 years, the
+amount of strontium-90 will be $A=\frac{A_0}{2}$. Plug them into the \eqref{exp_decay} 
+and solve for k. 
+		\begin{align*}
+			A = A_0e^{kt}& &&\text{Substitute $A$, and $t$}\\
+			\frac{A_0}{2} = A_0e^{k(28)}& &&\text{Cancel out $A_0$}\\
+			\frac{1}{2} = e^{k(28)}& &&\text{Exponential equation, take ln}\\
+			\ln{\left(\frac{1}{2}\right)}= \ln{e^{k(28)}}& &&\text{Apply power rule}\\
+			\ln{\left(\frac{1}{2}\right)}=k(28)\ln{e}& &&\text{We know $\ln{e}=1$}\\
+			\ln{\left(\frac{1}{2}\right)}=k(28)& &&\text{Divide both sides by 28}\\
+			\frac{\ln{\left(\frac{1}{2}\right)}}{28}=k& &&\text{Use calculator}\\[.2cm]
+			\frac{-0.6931472}{28}= k& && \\[.2cm]
+			-0.0248 \approx k& && \text{Our solution}	
+		\end{align*}
+\end{exa}
+b. We are looking for $t$, when $A_0=60$ grams and $A=10$ grams. Thus,
+		\begin{align*}
+			10 = 60e^{-0.0248t}& &&\text{Divide both sides by 10}\\
+			\frac{10}{60}= e^{-0.0248t}& &&\text{Reduce LHS }\\
+			\frac{1}{6}= e^{-0.0248t}& &&\text{Exponential equation, take ln}\\
+			\ln{\frac{1}{6}}= \ln{e^{-0.0248t}}& &&\text{Apply power rule}\\
+			\ln{\frac{1}{6}}=-0.0248t\ln{e}& &&\text{We know $\ln{e}=1$}\\
+			\ln{\frac{1}{6}}= -0.0248t& &&\text{Divide both sides by -0.0248}\\[.3cm]
+			\frac{\ln{\frac{1}{6}}}{-0.0248}=t& &&\text{Use calculator}\\[.3cm]
+			\frac{-1.7917595}{-0.0248}=& t && \\[.3cm]
+			72 \approx t& && \text{Our solution}	
+		\end{align*}
